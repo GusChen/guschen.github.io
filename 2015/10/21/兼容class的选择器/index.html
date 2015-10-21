@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -37,16 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="hexo命令hexo n == hexo new “我的博客” #新建文章hexo p == hexo publishhexo g == hexo generate #生成hexo s == hexo server #启动服务预览hexo d == hexo deploy #部署hexo new &amp;quot;postName&amp;quot; #新建文章hexo new page &amp;quot;pageN">
+<meta name="description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo常用命令">
-<meta property="og:url" content="http://guschen.github.io/2015/10/21/hexo常用命令/index.html">
+<meta property="og:title" content="兼容class的选择器">
+<meta property="og:url" content="http://guschen.github.io/2015/10/21/兼容class的选择器/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="hexo命令hexo n == hexo new “我的博客” #新建文章hexo p == hexo publishhexo g == hexo generate #生成hexo s == hexo server #启动服务预览hexo d == hexo deploy #部署hexo new &amp;quot;postName&amp;quot; #新建文章hexo new page &amp;quot;pageN">
-<meta property="og:updated_time" content="2015-10-21T13:08:33.013Z">
+<meta property="og:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
+<meta property="og:updated_time" content="2015-10-21T13:30:32.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo常用命令">
-<meta name="twitter:description" content="hexo命令hexo n == hexo new “我的博客” #新建文章hexo p == hexo publishhexo g == hexo generate #生成hexo s == hexo server #启动服务预览hexo d == hexo deploy #部署hexo new &amp;quot;postName&amp;quot; #新建文章hexo new page &amp;quot;pageN">
+<meta name="twitter:title" content="兼容class的选择器">
+<meta name="twitter:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +56,7 @@
   };
 </script>
 
-    <title> hexo常用命令 // 小鱼Gus </title>
+    <title> 兼容class的选择器 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -151,7 +151,7 @@
           
           
             
-              hexo常用命令
+              兼容class的选择器
             
           
         </h1>
@@ -160,7 +160,7 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-21T20:03:40+08:00" content="2015-10-21">
+          <time itemprop="dateCreated" datetime="2015-10-21T21:18:14+08:00" content="2015-10-21">
             2015-10-21
           </time>
         </span>
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/21/hexo常用命令/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/21/hexo常用命令/" itemprop="commentsCount"></span>
+              <a href="/2015/10/21/兼容class的选择器/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/21/兼容class的选择器/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -186,13 +186,8 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="hexo命令">hexo命令</h3><p><code>hexo n</code> == <code>hexo new</code> “我的博客” #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code> #生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code> #部署<br><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo publish [layout] &lt;title&gt;</code> #草稿</p>
-<h3 id="服务器">服务器</h3><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
-<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署</p>
-<a id="more"></a>
-<h3 id="监视文件变动">监视文件变动</h3><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单<br><code>hexo generate --watch</code> #监视文件变动</p>
-<h3 id="部署">部署</h3><p><code>hexo deploy -g</code></p>
-<h3 id="文章规格">文章规格</h3><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><p>在现在浏览器中，大多数浏览器已经拥有<code>getElementsByClassName</code>这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//兼容新老浏览器的class</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">node, classname</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (node.getElementsByClassName) &#123;</span><br><span class="line">        <span class="comment">//使用现有方法</span></span><br><span class="line">        <span class="keyword">return</span> node.getElementsByClassName(classname);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> results = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">        <span class="keyword">var</span> elems = node.getElementsByTagName(<span class="string">'*'</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (elems[i].className.indexOf(classname) != -<span class="number">1</span>) &#123;</span><br><span class="line">            results[results.length] = elems[i];</span><br><span class="line">          &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+</span>
       
     </div>
 
@@ -200,7 +195,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -209,11 +204,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/21/兼容class的选择器/" rel="prev">兼容class的选择器</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/21/hexo常用命令/" rel="next">hexo常用命令</a>
             
           </div>
         </div>
@@ -239,8 +234,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/21/hexo常用命令/"
-                       data-title="hexo常用命令" data-url="http://guschen.github.io/2015/10/21/hexo常用命令/">
+                  <div class="ds-thread" data-thread-key="2015/10/21/兼容class的选择器/"
+                       data-title="兼容class的选择器" data-url="http://guschen.github.io/2015/10/21/兼容class的选择器/">
                   </div>
                 
               </div>
@@ -355,7 +350,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo命令"><span class="nav-number">1.</span> <span class="nav-text">hexo命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器"><span class="nav-number">2.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#监视文件变动"><span class="nav-number">3.</span> <span class="nav-text">监视文件变动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">4.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章规格"><span class="nav-number">5.</span> <span class="nav-text">文章规格</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
