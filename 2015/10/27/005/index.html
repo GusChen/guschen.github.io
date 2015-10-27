@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="javascript,高程学习笔记," />
 
 
 
@@ -37,16 +37,28 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
+<meta name="description" content="第一章 Javascript简介（对js的历史进行介绍略过）第二章 在HTML中使用Javascript
+Html中的script
+
+第三章 基本概念
+Javascript的语法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="兼容class的选择器">
-<meta property="og:url" content="http://guschen.github.io/2015/10/21/兼容class的选择器/index.html">
+<meta property="og:title" content="Javasript高级编程读书笔记">
+<meta property="og:url" content="http://guschen.github.io/2015/10/27/005/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
-<meta property="og:updated_time" content="2015-10-21T13:57:46.953Z">
+<meta property="og:description" content="第一章 Javascript简介（对js的历史进行介绍略过）第二章 在HTML中使用Javascript
+Html中的script
+
+第三章 基本概念
+Javascript的语法">
+<meta property="og:updated_time" content="2015-10-27T15:36:20.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="兼容class的选择器">
-<meta name="twitter:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
+<meta name="twitter:title" content="Javasript高级编程读书笔记">
+<meta name="twitter:description" content="第一章 Javascript简介（对js的历史进行介绍略过）第二章 在HTML中使用Javascript
+Html中的script
+
+第三章 基本概念
+Javascript的语法">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +68,7 @@
   };
 </script>
 
-    <title> 兼容class的选择器 // 小鱼Gus </title>
+    <title> Javasript高级编程读书笔记 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -151,7 +163,7 @@
           
           
             
-              兼容class的选择器
+              Javasript高级编程读书笔记
             
           
         </h1>
@@ -160,8 +172,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-21T21:18:14+08:00" content="2015-10-21">
-            2015-10-21
+          <time itemprop="dateCreated" datetime="2015-10-27T23:26:55+08:00" content="2015-10-27">
+            2015-10-27
           </time>
         </span>
 
@@ -171,8 +183,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/21/兼容class的选择器/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/21/兼容class的选择器/" itemprop="commentsCount"></span>
+              <a href="/2015/10/27/005/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/27/005/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -186,7 +198,12 @@
       
 
       
-        <span itemprop="articleBody"><p>在现在浏览器中，大多数浏览器已经拥有<code>getElementsByClassName</code>这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//兼容新老浏览器的class</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">node, classname</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (node.getElementsByClassName) &#123;</span><br><span class="line">        <span class="comment">//使用现有方法</span></span><br><span class="line">        <span class="keyword">return</span> node.getElementsByClassName(classname);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> results = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">        <span class="keyword">var</span> elems = node.getElementsByTagName(<span class="string">'*'</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (elems[i].className.indexOf(classname) != -<span class="number">1</span>) &#123;</span><br><span class="line">            results[results.length] = elems[i];</span><br><span class="line">          &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h4 id="第一章_Javascript简介（对js的历史进行介绍略过）">第一章 Javascript简介（对js的历史进行介绍略过）</h4><h4 id="第二章_在HTML中使用Javascript">第二章 在HTML中使用Javascript</h4><ul>
+<li><a href="/2015/10/22/003/">Html中的script</a></li>
+</ul>
+<h4 id="第三章_基本概念">第三章 基本概念</h4><ul>
+<li><a href="/2015/10/22/004/">Javascript的语法</a></li>
+</ul>
 </span>
       
     </div>
@@ -197,6 +214,8 @@
           
             <a href="/tags/javascript/" rel="tag">#javascript</a>
           
+            <a href="/tags/高程学习笔记/" rel="tag">#高程学习笔记</a>
+          
         </div>
       
 
@@ -204,13 +223,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/22/1-Html中的script/" rel="prev">1.Html中的script</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/21/hexo常用命令/" rel="next">hexo常用命令</a>
+              <a href="/2015/10/27/004/" rel="next">Javascript的语法（编辑中）</a>
             
           </div>
         </div>
@@ -236,8 +253,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/21/兼容class的选择器/"
-                       data-title="兼容class的选择器" data-url="http://guschen.github.io/2015/10/21/兼容class的选择器/">
+                  <div class="ds-thread" data-thread-key="2015/10/27/005/"
+                       data-title="Javasript高级编程读书笔记" data-url="http://guschen.github.io/2015/10/27/005/">
                   </div>
                 
               </div>
@@ -277,7 +294,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -309,6 +326,10 @@
             
               <span class="links-of-author-item">
                 <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ie786Ofx-OfW6uHs58nv5vHk6ODlp_rm5A" target="_blank">email</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://guschen.github.io/Demo" target="_blank">Demo</a>
               </span>
             
           
@@ -352,7 +373,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一章_Javascript简介（对js的历史进行介绍略过）"><span class="nav-number">1.</span> <span class="nav-text">第一章 Javascript简介（对js的历史进行介绍略过）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二章_在HTML中使用Javascript"><span class="nav-number">2.</span> <span class="nav-text">第二章 在HTML中使用Javascript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三章_基本概念"><span class="nav-number">3.</span> <span class="nav-text">第三章 基本概念</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
