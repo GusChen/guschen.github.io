@@ -1,0 +1,855 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="记录学习点滴,分享前端知识" />
+
+
+
+  <meta name="keywords" content="javascript,高程学习笔记," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
+
+
+<meta name="description" content="一元操作符
+递增和递减操作符
+++ 和 --,递增和递减操作符直接借鉴自 C，而且各有两个版本：前置型和后置型。顾名思义，前置型应该位于要操作的变量之前，而后置型则应该位于要操作的变量之后。12345//例如age++age--++age--age">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript中的操作符">
+<meta property="og:url" content="http://guschen.github.io/2015/11/02/9/index.html">
+<meta property="og:site_name" content="小鱼Gus">
+<meta property="og:description" content="一元操作符
+递增和递减操作符
+++ 和 --,递增和递减操作符直接借鉴自 C，而且各有两个版本：前置型和后置型。顾名思义，前置型应该位于要操作的变量之前，而后置型则应该位于要操作的变量之后。12345//例如age++age--++age--age">
+<meta property="og:updated_time" content="2015-11-02T14:35:10.425Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript中的操作符">
+<meta name="twitter:description" content="一元操作符
+递增和递减操作符
+++ 和 --,递增和递减操作符直接借鉴自 C，而且各有两个版本：前置型和后置型。顾名思义，前置型应该位于要操作的变量之前，而后置型则应该位于要操作的变量之后。12345//例如age++age--++age--age">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> Javascript中的操作符 // 小鱼Gus </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">小鱼Gus</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Javascript中的操作符
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-02T21:40:03+08:00" content="2015-11-02">
+            2015-11-02
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/02/9/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/02/9/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h5 id="一元操作符">一元操作符</h5><ul>
+<li>递增和递减操作符<ul>
+<li><code>++</code> 和 <code>--</code>,递增和递减操作符直接借鉴自 C，而且各有两个版本：前置型和后置型。顾名思义，前置型应该位于要操作的变量之前，而后置型则应该位于要操作的变量之后。<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如</span></span><br><span class="line"><span class="comment">age</span><span class="literal">+</span><span class="literal">+</span></span><br><span class="line"><span class="comment">age</span><span class="literal">-</span><span class="literal">-</span></span><br><span class="line"><span class="literal">+</span><span class="literal">+</span><span class="comment">age</span></span><br><span class="line"><span class="literal">-</span><span class="literal">-</span><span class="comment">age</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>一元加和减操作符<ul>
+<li><code>+</code>和<code>-</code>，绝大多数开发人员对一元加和减操作符都不会陌生，而且这两个 <code>ECMAScript</code> 操作符的作用与数学书上讲的完全一样。一元加操作符以一个加号<code>+</code>表示，放在数值前面，对数值不会产生任何影响。</li>
+</ul>
+</li>
+</ul>
+<h5 id="位操作符">位操作符</h5><ol>
+<li>按位非<code>NOT</code>，符由一个波浪线<code>~</code>表示，执行按位非的结果就是返回数值的反码。<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var <span class="label">num1</span> = <span class="number">25</span>; <span class="comment">// 二进制 00000000000000000000000000011001</span></span><br><span class="line">var <span class="label">num2</span> = ~<span class="label">num1</span>; <span class="comment">// 二进制 11111111111111111111111111100110</span></span><br><span class="line">alert<span class="comment">(num2)</span>; <span class="comment">// -26</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>按位与<code>AND</code>，由一个和号字符<code>&amp;</code>表示，它有两个操作符数。<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span> = <span class="number">25</span> &amp; <span class="number">3</span>;</span><br><span class="line">alert(<span class="literal">result</span>); //<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>按位或<code>OR</code>，由一个竖线符号<code>|</code>表示，同样也有两个操作数。<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span> = <span class="number">25</span> | <span class="number">3</span>;</span><br><span class="line">alert(<span class="literal">result</span>); //<span class="number">27</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>按位异或<code>XOR</code>，由一个插入符号<code>^</code>表示，也有两个操作数。<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span> = <span class="number">25</span> ^ <span class="number">3</span>;</span><br><span class="line">alert(<span class="literal">result</span>); //<span class="number">26</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>左移操作符由两个小于号<code>&lt;&lt;</code>表示，这个操作符会将数值的所有位向左移动指定的位数。<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> oldValue</span> = <span class="number">2</span>; <span class="comment">// 等于二进制的 10</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> newValue</span> = oldValue <span class="type">&lt;&lt; 5; // 等于二进制的 1000000，十进制的 64</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>有符号的右移操作符由两个大于号<code>&gt;&gt;</code>表示，这个操作符会将数值向右移动，但保留符号位（即正负号标记）。<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> oldValue</span> = <span class="number">64</span>; <span class="comment">// 等于二进制的 1000000</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> newValue</span> = oldValue &gt;&gt; <span class="number">5</span>; <span class="comment">// 等于二进制的 10 ，即十进制的 2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>无符号右移操作符由 3 个大于号<code>&gt;&gt;&gt;</code>表示，这个操作符会将数值的所有 32 位都向右移动。<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> oldValue</span> = <span class="number">64</span>; <span class="comment">// 等于二进制的 1000000</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> newValue</span> = oldValue &gt;&gt;&gt; <span class="number">5</span>; <span class="comment">// 等于二进制的 10 ，即十进制的 2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="布尔操作符">布尔操作符</h5><ol>
+<li>逻辑非操作符由一个叹号<code>！</code>表示，可以应用于 <code>ECMAScript</code> 中的任何值。无论这个值是什么数据类型，这个操作符都会返回一个布尔值。</li>
+<li><p>逻辑与操作符由两个和号<code>&amp;&amp;</code>表示，有两个操作数</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span> = <span class="literal">true</span> &amp;&amp; <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>逻辑与的操作表</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>第一个操作数</th>
+<th>第二个操作数</th>
+<th>结 果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>逻辑或操作符由两个竖线符号<code>||</code>表示</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">result</span> = <span class="literal">true</span> || <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>逻辑或的操作表</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>第一个操作数</th>
+<th>第二个操作数</th>
+<th>结 果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>True</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>True</td>
+<td>false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h5 id="乘性操作符">乘性操作符</h5><ul>
+<li>乘法操作符由一个星号<code>*</code>表示，用于计算两个数值的乘积。</li>
+<li>除法操作符由一个斜线符号<code>/</code>表示，执行第二个操作数除第一个操作数的计算。</li>
+<li>求模（余数）操作符由一个百分号<code>%</code>表示。</li>
+</ul>
+<h5 id="加性操作符">加性操作符</h5><ul>
+<li>加法操作符<code>+</code></li>
+<li>减法操作符<code>-</code></li>
+</ul>
+<h5 id="关系操作符">关系操作符</h5><ul>
+<li>小于<code>&lt;</code> 、大于<code>&gt;</code> 、小于等于<code>&lt;=</code>和大于等于<code>&gt;=</code>这几个关系操作符用于对两个值进行比较，比较的规则与我们在数学课上所学的一样。</li>
+</ul>
+<h5 id="相等操作符">相等操作符</h5><ul>
+<li>相等和不相等，<code>ECMAScript</code> 中的相等操作符由两个等于号（<code>==）</code>表示，如果两个操作数相等，则返回 <code>true</code>。而不相等操作符由叹号后跟等于号（<code>!=）</code>表示，如果两个操作数不相等，则返回 <code>true</code>。这两个操作符都会先转换操作数（通常称为强制转型），然后再比较它们的相等性。<ul>
+<li>特殊情况及比较结果：</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>表 达 式</th>
+<th>值</th>
+<th>表 达 式</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null == undefined</td>
+<td>true</td>
+<td>true == 1</td>
+<td>true</td>
+</tr>
+<tr>
+<td>“NaN” == NaN</td>
+<td>false</td>
+<td>true == 2</td>
+<td>false</td>
+</tr>
+<tr>
+<td>5 == NaN</td>
+<td>false</td>
+<td>undefined == 0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>NaN == NaN</td>
+<td>false</td>
+<td>null == 0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>NaN != NaN</td>
+<td>true</td>
+<td>“5”==5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false == 0</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>全等和不全等，除了在比较之前不转换操作数之外，全等和不全等操作符与相等和不相等操作符没有什么区别。全等操作符由 3 个等于号<code>===</code>表示，它只在两个操作数未经转换就相等的情况下返回 <code>true</code>。</li>
+</ul>
+<h5 id="条件操作符">条件操作符</h5><ul>
+<li>条件操作符应该算是 <code>ECMAScript</code> 中最灵活的一种操作符了，而且它遵循与 Java 中的条件操作符相同的语法形式，如下面的例子所示：<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="annotation">variable</span> = boolean<span class="number">_</span>expression ? true<span class="number">_</span><span class="keyword">value</span> : false<span class="number">_</span><span class="keyword">value</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="赋值操作符">赋值操作符</h5><ul>
+<li>简单的赋值操作符由等于号<code>=</code>表示，其作用就是把右侧的值赋给左侧的变量</li>
+<li>每个主要算术操作符（以及个别的其他操作符）都有对应的复合赋值操作符。这些操作符如下所示：<ul>
+<li>乘/赋值<code>*=</code>；</li>
+<li>除/赋值<code>/=</code>；</li>
+<li>模/赋值<code>%=</code>；</li>
+<li>加/赋值<code>+=</code>；</li>
+<li>减/赋值<code>-=</code>；</li>
+<li>左移/赋值<code>&lt;&lt;=</code>；</li>
+<li>有符号右移/赋值<code>&gt;&gt;=</code>；</li>
+<li>无符号右移/赋值<code>&gt;&gt;&gt;=</code>。</li>
+</ul>
+</li>
+</ul>
+<h5 id="逗号操作符">逗号操作符</h5><ul>
+<li>使用逗号操作符可以在一条语句中执行多个操作，如下面的例子所示：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var num1=<span class="number">1</span>, num2=<span class="number">2</span>, num3=<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>逗号操作符多用于声明多个变量；但除此之外，逗号操作符还可以用于赋值。在用于赋值时，逗号操作符总会返回表达式中的最后一项，如下面的例子所示：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var num = (<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">0</span>); <span class="comment">// num 的值为 0</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/高程学习笔记/" rel="tag">#高程学习笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/31/8/" rel="next">Javascript中的数据类型</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/11/02/9/"
+                       data-title="Javascript中的操作符" data-url="http://guschen.github.io/2015/11/02/9/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/13878532?v=3&amp;s=460" alt="小鱼Gus" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">小鱼Gus</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">记录学习点滴,分享前端知识</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Guschen" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ie786Ofx-OfW6uHs58nv5vHk6ODlp_rm5A" target="_blank">email</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://guschen.github.io/Demo" target="_blank">Demo</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.51yimu.cn" target="_blank">随缘小栈</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.liuleiweb.com" target="_blank">E空间</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.qiushurong.cn" target="_blank">小树技术博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.thisck.com" target="_blank">ck博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.liusapp.com" target="_blank">流光博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一元操作符"><span class="nav-number">1.</span> <span class="nav-text">一元操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#位操作符"><span class="nav-number">2.</span> <span class="nav-text">位操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔操作符"><span class="nav-number">3.</span> <span class="nav-text">布尔操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#乘性操作符"><span class="nav-number">4.</span> <span class="nav-text">乘性操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加性操作符"><span class="nav-number">5.</span> <span class="nav-text">加性操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关系操作符"><span class="nav-number">6.</span> <span class="nav-text">关系操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相等操作符"><span class="nav-number">7.</span> <span class="nav-text">相等操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#条件操作符"><span class="nav-number">8.</span> <span class="nav-text">条件操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值操作符"><span class="nav-number">9.</span> <span class="nav-text">赋值操作符</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逗号操作符"><span class="nav-number">10.</span> <span class="nav-text">逗号操作符</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼Gus</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"guschen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
