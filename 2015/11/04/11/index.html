@@ -37,22 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。
+<meta name="description" content="函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：123function functionName(arg0, arg1,...,argN) &amp;#123;  statements&amp;#125;
 
-定义变量时要使用var操作符（注意var是一个关键字），后跟变量名（即一个标识符）;">
+函数在碰到return的任何代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript中的变量">
-<meta property="og:url" content="http://guschen.github.io/2015/10/29/7/index.html">
+<meta property="og:title" content="Javascript中的函数">
+<meta property="og:url" content="http://guschen.github.io/2015/11/04/11/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。
+<meta property="og:description" content="函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：123function functionName(arg0, arg1,...,argN) &amp;#123;  statements&amp;#125;
 
-定义变量时要使用var操作符（注意var是一个关键字），后跟变量名（即一个标识符）;">
-<meta property="og:updated_time" content="2015-10-29T13:30:55.917Z">
+函数在碰到return的任何代码">
+<meta property="og:updated_time" content="2015-11-04T14:44:30.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript中的变量">
-<meta name="twitter:description" content="ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。
+<meta name="twitter:title" content="Javascript中的函数">
+<meta name="twitter:description" content="函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：123function functionName(arg0, arg1,...,argN) &amp;#123;  statements&amp;#125;
 
-定义变量时要使用var操作符（注意var是一个关键字），后跟变量名（即一个标识符）;">
+函数在碰到return的任何代码">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -62,7 +62,7 @@
   };
 </script>
 
-    <title> Javascript中的变量 // 小鱼Gus </title>
+    <title> Javascript中的函数 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -157,7 +157,7 @@
           
           
             
-              Javascript中的变量
+              Javascript中的函数
             
           
         </h1>
@@ -166,8 +166,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-29T21:22:26+08:00" content="2015-10-29">
-            2015-10-29
+          <time itemprop="dateCreated" datetime="2015-11-04T22:40:03+08:00" content="2015-11-04">
+            2015-11-04
           </time>
         </span>
 
@@ -177,8 +177,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/29/7/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/7/" itemprop="commentsCount"></span>
+              <a href="/2015/11/04/11/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/11/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -192,20 +192,19 @@
       
 
       
-        <span itemprop="articleBody"><ul>
-<li><p><code>ECMAScript</code> 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。</p>
-</li>
-<li><p>定义变量时要使用<code>var</code>操作符（注意<code>var</code>是一个关键字），后跟变量名（即一个标识符）;</p>
-</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> message</span> = <span class="string">"hi"</span>;</span><br><span class="line">message = <span class="number">100</span>; <span class="comment">// 有效，但不推荐</span></span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span><span class="params">(arg0, arg1,<span class="rest_arg">...,argN</span>)</span> </span>&#123;</span><br><span class="line">  statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li><code>var</code>操作符定义的变量将成为定义该变量的作用域中的局部变量。也就是说，如果在函数中使用<code>var</code>定义一个变量，那么这个变量在函数退出后就会被销毁。（外部定义的变量是全局变量，函数内部定义的变量是局部变量，如果在函数中定义函数不适用<code>var</code>将被解析为全局变量。）</li>
+<li>函数在碰到<code>return</code>的任何代码都永远不会执行。</li>
+<li><code>return</code> 后面可以带参数，也可以不带参。</li>
 </ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> message = <span class="string">"hi"</span>; <span class="comment">// 局部变量</span></span><br><span class="line">  demo = <span class="number">1</span>;<span class="comment">//全局变量</span></span><br><span class="line">  &#125;</span><br><span class="line">test();</span><br><span class="line">alert(message); <span class="comment">// 错误！</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>在严格模式下，不能定义名为<code>eval</code>或<code>arguments</code>的变量，否则会导致语法错误。</li>
+<h6 id="参数问题">参数问题</h6><ul>
+<li><code>ECMAScript</code> 函数的参数与大多数其他语言中函数的参数有所不同。 <code>ECMAScript</code> 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。</li>
+<li><code>arguments</code> 对象只是与数组类似（它并不是 <code>Array</code> 的实例），因为可以使用方括号语法访问它的每一个元素（即第一个元素是 <code>arguments[0]</code>，第二个元素是 <code>argumetns[1]</code>，以此类推），使用 <code>length</code> 属性来确定传递进来多少个参数。</li>
+<li>在函数体内可以通过 <code>arguments</code> 对象来访问这个参数数组，从而获取传递给函数的每一个参数。</li>
+<li>通过访问 <code>arguments</code> 对象的 <code>length</code> 属性可以获知有多少个参数传递给了函数</li>
+</ul>
+<h6 id="没有重载">没有重载</h6><ul>
+<li><code>ECMAScript</code> 函数不能像传统意义上那样实现重载。而在其他语言（如 <code>Java</code>）中，可以为一个函数编写两个定义，只要这两个定义的签名（接受的参数的类型和数量）不同即可。如前所述， <code>ECMAScirpt</code>函数没有签名，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可能做到的。</li>
 </ul>
 </span>
       
@@ -226,13 +225,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/31/8/" rel="prev">Javascript中的数据类型</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/28/6/" rel="next">Javascript中的关键字和保留字</a>
+              <a href="/2015/11/03/10/" rel="next">Javascript中的语句</a>
             
           </div>
         </div>
@@ -258,8 +255,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/29/7/"
-                       data-title="Javascript中的变量" data-url="http://guschen.github.io/2015/10/29/7/">
+                  <div class="ds-thread" data-thread-key="2015/11/04/11/"
+                       data-title="Javascript中的函数" data-url="http://guschen.github.io/2015/11/04/11/">
                   </div>
                 
               </div>
@@ -378,7 +375,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#参数问题"><span class="nav-number">1.</span> <span class="nav-text">参数问题</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#没有重载"><span class="nav-number">2.</span> <span class="nav-text">没有重载</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

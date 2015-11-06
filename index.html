@@ -152,6 +152,88 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/04/11/" itemprop="url">
+                Javascript中的函数
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-04T22:40:03+08:00" content="2015-11-04">
+            2015-11-04
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/04/11/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/11/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span><span class="params">(arg0, arg1,<span class="rest_arg">...,argN</span>)</span> </span>&#123;</span><br><span class="line">  statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>函数在碰到<code>return</code>的任何代码都永远不会执行。</li>
+<li><code>return</code> 后面可以带参数，也可以不带参。</li>
+</ul>
+<h6 id="参数问题">参数问题</h6><ul>
+<li><code>ECMAScript</code> 函数的参数与大多数其他语言中函数的参数有所不同。 <code>ECMAScript</code> 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。</li>
+<li><code>arguments</code> 对象只是与数组类似（它并不是 <code>Array</code> 的实例），因为可以使用方括号语法访问它的每一个元素（即第一个元素是 <code>arguments[0]</code>，第二个元素是 <code>argumetns[1]</code>，以此类推），使用 <code>length</code> 属性来确定传递进来多少个参数。</li>
+<li>在函数体内可以通过 <code>arguments</code> 对象来访问这个参数数组，从而获取传递给函数的每一个参数。</li>
+<li>通过访问 <code>arguments</code> 对象的 <code>length</code> 属性可以获知有多少个参数传递给了函数</li>
+</ul>
+<h6 id="没有重载">没有重载</h6><ul>
+<li><code>ECMAScript</code> 函数不能像传统意义上那样实现重载。而在其他语言（如 <code>Java</code>）中，可以为一个函数编写两个定义，只要这两个定义的签名（接受的参数的类型和数量）不同即可。如前所述， <code>ECMAScirpt</code>函数没有签名，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可能做到的。</li>
+</ul>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/11/03/10/" itemprop="url">
                 Javascript中的语句
               </a>
@@ -898,84 +980,13 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/21/1/" itemprop="url">
-                hexo常用命令
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-21T20:03:40+08:00" content="2015-10-21">
-            2015-10-21
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/21/1/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/21/1/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="hexo命令">hexo命令</h3><p><code>hexo n</code> == <code>hexo new</code> “我的博客” #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code> #生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code> #部署<br><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo publish [layout] &lt;title&gt;</code> #草稿</p>
-<h3 id="服务器">服务器</h3><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
-<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/21/1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+  </nav>
+
 
             </div>
 
@@ -1008,7 +1019,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
