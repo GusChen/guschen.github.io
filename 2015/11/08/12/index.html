@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="javascript,高程学习笔记," />
 
 
 
@@ -37,16 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
+<meta name="description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
+在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="兼容class的选择器">
-<meta property="og:url" content="http://guschen.github.io/2015/10/21/2/index.html">
+<meta property="og:title" content="Javascript的基本类型和引用类型的值">
+<meta property="og:url" content="http://guschen.github.io/2015/11/08/12/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
-<meta property="og:updated_time" content="2015-10-21T13:57:46.953Z">
+<meta property="og:description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
+在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
+<meta property="og:updated_time" content="2015-11-08T03:46:52.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="兼容class的选择器">
-<meta name="twitter:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
+<meta name="twitter:title" content="Javascript的基本类型和引用类型的值">
+<meta name="twitter:description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
+在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +59,7 @@
   };
 </script>
 
-    <title> 兼容class的选择器 // 小鱼Gus </title>
+    <title> Javascript的基本类型和引用类型的值 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -151,7 +154,7 @@
           
           
             
-              兼容class的选择器
+              Javascript的基本类型和引用类型的值
             
           
         </h1>
@@ -160,8 +163,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-21T21:18:14+08:00" content="2015-10-21">
-            2015-10-21
+          <time itemprop="dateCreated" datetime="2015-11-08T10:45:00+08:00" content="2015-11-08">
+            2015-11-08
           </time>
         </span>
 
@@ -171,8 +174,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/21/2/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/21/2/" itemprop="commentsCount"></span>
+              <a href="/2015/11/08/12/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/08/12/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -186,7 +189,37 @@
       
 
       
-        <span itemprop="articleBody"><p>在现在浏览器中，大多数浏览器已经拥有<code>getElementsByClassName</code>这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//兼容新老浏览器的class</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">node, classname</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (node.getElementsByClassName) &#123;</span><br><span class="line">        <span class="comment">//使用现有方法</span></span><br><span class="line">        <span class="keyword">return</span> node.getElementsByClassName(classname);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> results = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">        <span class="keyword">var</span> elems = node.getElementsByTagName(<span class="string">'*'</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (elems[i].className.indexOf(classname) != -<span class="number">1</span>) &#123;</span><br><span class="line">            results[results.length] = elems[i];</span><br><span class="line">          &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><ul>
+<li><code>ECMAScript</code> 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。</li>
+<li>在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： <code>Undefined</code>、 <code>Null</code>、 <code>Boolean</code>、 <code>Number</code> 和 <code>String</code>。这 5 种基本数据类型是按值访问的，因为可以操作保存在变量中的实际的值。</li>
+<li>引用类型的值是保存在内存中的对象。与其他语言不同， <code>JavaScript</code> 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。为此，引用类型的值是按引用访问的。</li>
+</ul>
+<a id="more"></a>
+<h5 id="动态的属性">动态的属性</h5><ul>
+<li>定义基本类型值和引用类型值的方式是类似的：创建一个变量并为该变量赋值。但是，当这个值保存到变量中以后，对不同类型值可以执行的操作则大相径庭。对于引用类型的值，我们可以为其添加属性和方法，也可以改变和删除其属性和方法。<h5 id="复制变量值">复制变量值</h5></li>
+<li>除了保存的方式不同之外，在从一个变量向另一个变量复制基本类型值和引用类型值时，也存在不同。如果从一个变量向另一个变量复制基本类型的值，会在变量对象上创建一个新值，然后把该值复制到为新变量分配的位置上。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var num1 = <span class="number">2l</span>;</span><br><span class="line">var num2 = num1;</span><br><span class="line">num2 = <span class="number">22</span>;</span><br><span class="line">console.<span class="built_in">log</span>(num1); <span class="comment">// 21</span></span><br><span class="line">console.<span class="built_in">log</span>(num1); <span class="comment">// 22</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>当从一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值复制一份放到为新变量分配的空间中。不同的是，这个值的副本实际上是一个指针，而这个指针指向存储在堆中的一个对象。复制操作结束后，两个变量实际上将引用同一个对象。因此，改变其中一个变量，就会影响另一个变量。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> obj2 = obj1;</span><br><span class="line">obj1.name = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj2.name); <span class="comment">//11</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="传递参数">传递参数</h5><ul>
+<li><code>ECMAScript</code> 中所有函数的参数都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。基本类型值的传递如同基本类型变量的复制一样，而引用类型值的传递，则如同引用类型变量的复制一样。有不少开发人员在这一点上可能会感到困惑，因为访问变量有按值和按引用两种方式，而参数只能按值传递。</li>
+<li>在向参数传递基本类型的值时，被传递的值会被复制给一个局部变量（即命名参数，或者用<code>ECMAScript</code> 的概念来说，就是 <code>arguments</code> 对象中的一个元素）。在向参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量，因此这个局部变量的变化会反映在函数的外部。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基本类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num + <span class="number">20</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> ret = add(num);</span><br><span class="line"><span class="built_in">console</span>.log(num); <span class="comment">//10</span></span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">//30</span></span><br><span class="line"><span class="comment">//引用类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">  obj.name = <span class="string">'Guschen'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> ret2 = setName(obj);</span><br><span class="line"><span class="built_in">console</span>.log(ret2.name); <span class="comment">// Guschen</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.name); <span class="comment">// Guschen</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="检测类型">检测类型</h5><ul>
+<li><p><code>typeof</code> 操作符是最佳的工具。说得更具体一点， <code>typeof</code> 操作符是确定一个变量是字符串、数值、布尔值，还是 <code>undefined</code> 的最佳工具。如果变量的值是一个对象或 <code>null</code>，则 <code>typeof</code> 操作符会像下面例子中所示的那样返回<code>&quot;object&quot;</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"Nicholas"</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">22</span>;</span><br><span class="line"><span class="keyword">var</span> u;</span><br><span class="line"><span class="keyword">var</span> n = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">alert(<span class="keyword">typeof</span> s); <span class="comment">//string</span></span><br><span class="line">alert(<span class="keyword">typeof</span> i); <span class="comment">//number</span></span><br><span class="line">alert(<span class="keyword">typeof</span> b); <span class="comment">//boolean</span></span><br><span class="line">alert(<span class="keyword">typeof</span> u); <span class="comment">//undefined</span></span><br><span class="line">alert(<span class="keyword">typeof</span> n); <span class="comment">//object</span></span><br><span class="line">alert(<span class="keyword">typeof</span> o); <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>虽然在检测基本数据类型时 <code>typeof</code> 是非常得力的助手，但在检测引用类型的值时，这个操作符的用处不大。 通常， 我们并不是想知道某个值是对象，而是想知道它是什么类型的对象。为此， <code>ECMAScript</code>提供了 <code>instanceof</code> 操作符，其语法如下所示：</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">result</span> = variable instanceof <span class="function"><span class="keyword">constructor</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>根据规定，所有引用类型的值都是 <code>Object</code> 的实例。因此，在检测一个引用类型值和 Object 构造函数时， <code>instanceof</code> 操作符始终会返回 <code>true</code>。当然，如果使用 <code>instanceof</code> 操作符检测基本类型的值，则该操作符始终会返回 <code>false</code>，因为基本类型不是对象。</li>
+</ul>
 </span>
       
     </div>
@@ -197,6 +230,8 @@
           
             <a href="/tags/javascript/" rel="tag">#javascript</a>
           
+            <a href="/tags/高程学习笔记/" rel="tag">#高程学习笔记</a>
+          
         </div>
       
 
@@ -204,13 +239,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/22/3/" rel="prev">Html中的script</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/21/1/" rel="next">hexo常用命令</a>
+              <a href="/2015/11/04/11/" rel="next">Javascript的函数</a>
             
           </div>
         </div>
@@ -236,8 +269,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/21/2/"
-                       data-title="兼容class的选择器" data-url="http://guschen.github.io/2015/10/21/2/">
+                  <div class="ds-thread" data-thread-key="2015/11/08/12/"
+                       data-title="Javascript的基本类型和引用类型的值" data-url="http://guschen.github.io/2015/11/08/12/">
                   </div>
                 
               </div>
@@ -356,7 +389,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态的属性"><span class="nav-number">1.</span> <span class="nav-text">动态的属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#复制变量值"><span class="nav-number">2.</span> <span class="nav-text">复制变量值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#传递参数"><span class="nav-number">3.</span> <span class="nav-text">传递参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#检测类型"><span class="nav-number">4.</span> <span class="nav-text">检测类型</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
