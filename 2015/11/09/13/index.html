@@ -37,31 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
+<meta name="description" content="执行环境（execution context，为简单起见，有时也称为“ 环境”）是 JavaScript 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象variable object ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
+全局执行环境是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Html中的script">
-<meta property="og:url" content="http://guschen.github.io/2015/10/22/3/index.html">
+<meta property="og:title" content="Javascript的执行环境及作用域">
+<meta property="og:url" content="http://guschen.github.io/2015/11/09/13/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
-<meta property="og:updated_time" content="2015-11-08T03:45:07.870Z">
+<meta property="og:description" content="执行环境（execution context，为简单起见，有时也称为“ 环境”）是 JavaScript 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象variable object ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
+全局执行环境是">
+<meta property="og:updated_time" content="2015-11-09T13:24:14.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Html中的script">
-<meta name="twitter:description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
+<meta name="twitter:title" content="Javascript的执行环境及作用域">
+<meta name="twitter:description" content="执行环境（execution context，为简单起见，有时也称为“ 环境”）是 JavaScript 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象variable object ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
+全局执行环境是">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -71,7 +59,7 @@ defer：可选。表示脚本可以延迟到文档">
   };
 </script>
 
-    <title> Html中的script // 小鱼Gus </title>
+    <title> Javascript的执行环境及作用域 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -166,7 +154,7 @@ defer：可选。表示脚本可以延迟到文档">
           
           
             
-              Html中的script
+              Javascript的执行环境及作用域
             
           
         </h1>
@@ -175,8 +163,8 @@ defer：可选。表示脚本可以延迟到文档">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-22T20:57:05+08:00" content="2015-10-22">
-            2015-10-22
+          <time itemprop="dateCreated" datetime="2015-11-09T20:45:00+08:00" content="2015-11-09">
+            2015-11-09
           </time>
         </span>
 
@@ -186,8 +174,8 @@ defer：可选。表示脚本可以延迟到文档">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/22/3/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/22/3/" itemprop="commentsCount"></span>
+              <a href="/2015/11/09/13/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/13/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -201,34 +189,38 @@ defer：可选。表示脚本可以延迟到文档">
       
 
       
-        <span itemprop="articleBody"><h3 id="在html4-0定义的script的属性">在html4.0定义的<code>script</code>的属性</h3><ul>
-<li><p><code>async</code>：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 <code>async</code> 的脚本并不保证按照指定它们的先后顺序执行。</p>
-</li>
-<li><p><code>charset</code>：可选。表示通过 <code>src</code> 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。</p>
-</li>
-<li><p><code>defer</code>：可选。表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。 IE7 及更早版本对嵌入脚本也支持这个属性。</p>
-</li>
-<li><p><code>language</code>：已废弃。原来用于表示编写代码使用的脚本语言（如 <code>JavaScript</code>、<code>JavaScript1.2</code>或 <code>VBScript</code>）。大多数浏览器会忽略这个属性，因此也没有必要再用了。</p>
-</li>
-<li><p><code>src</code>：可选。表示包含要执行代码的外部文件。</p>
-</li>
-<li><p><code>type</code>：可选。可以看成是 <code>language</code> 的替代属性；表示编写代码使用的脚本语言的内容类型（也称为 <code>MIME</code> 类型）。虽然 <code>text/javascript</code> 和 <code>text/ecmascript</code> 都已经不被推荐使用，但人们一直以来使用的都还是 <code>text/javascript</code>。实际上，服务器在传送 <code>JavaScript</code> 文件时使用的MIME 类型通常是 <code>application/x–javascript</code>，但在 <code>type</code> 中设置这个值却可能导致脚本被忽略。另外，在非 IE浏览器中还可以使用以下值：<code>application/javascript</code> 和 <code>application/ecmascript</code>。考虑到约定俗成和最大限度的浏览器兼容性，目前 <code>type</code> 属性的值依旧还是<code>text/javascript</code>。不过，这个属性并不是必需的，如果没有指定这个属性，则其默认值仍为<code>text/javascript</code>。</p>
-</li>
+        <span itemprop="articleBody"><ul>
+<li>执行环境（<code>execution context</code>，为简单起见，有时也称为“ 环境”）是 <code>JavaScript</code> 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象<code>variable object</code> ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。</li>
+<li>全局执行环境是最外围的一个执行环境。根据 <code>ECMAScript</code> 实现所在的宿主环境不同，表示执行环境的对象也不一样。在 <code>Web</code> 浏览器中，全局执行环境被认为是 <code>window</code> 对象 ，因此所有全局变量和函数都是作为 <code>window</code> 对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退出——例如关闭网页或浏览器——时才会被销毁）。</li>
+<li>每个函数都有自己的执行环境。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。 <code>ECMAScript</code> 程序中的执行流正是由这个方便的机制控制着。</li>
 </ul>
 <a id="more"></a>
-<h3 id="标签的位置">标签的位置</h3><p>按照传统的做法，所有<code>script</code>元素都应该放在页面的<code>head</code>元素中，例如：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>Example HTML Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 这里放内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>现代 Web 应用程序一般都把全部 JavaScript 引用放在<body>元素中页面内容的后面，如下例所示：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>Example HTML Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 这里放内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></body></p>
-<h3 id="在XHTML中的用法">在XHTML中的用法</h3><ul>
-<li>这里比较语句 <code>a &lt; b</code> 中的小于号 <code>&lt;</code>在 XHTML 中将被当作开始一个新标签来解析。但是作为标签来讲，小于号后面不能跟空格，因此就会导致语法错误。需要替换成 <code>&amp;lt;</code>，或者是使用<code>CData</code>片段</li>
+<ul>
+<li>当代码在一个环境中执行时，会创建变量对象的一个作用域链<code>scope chain</code>。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象<code>activation object</code>作为变量对象。活动对象在最开始时只包含一个变量，即 <code>arguments</code> 对象（这个对象在全局环境中是不存在的）。作用域链中的下一个变量对象来自包含（外部）环境，而再下一个变量对象则来自下一个包含环境。这样，一直延续到全局执行环境；全局执行环境的变量对象始终都是作用域链中的最后一个对象。</li>
+<li>标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程始终从作用域链的前端开始，然后逐级地向后回溯，直至找到标识符为止（如果找不到标识符，通常会导致错误发生）。</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="handlebars"><span class="xml"><span class="cdata">&lt;![CDATA[</span><br><span class="line">//代码</span><br><span class="line">]]&gt;</span></span></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="文档模式">文档模式</h3><ul>
-<li>ie中存在的文档模式会影响到页面的<code>css</code>和<code>js</code>的渲染，文档模式是： 混杂模式(又称为怪癖模式)<code>quirks mode</code>和标准模式<code>standards mode</code>。</li>
+<h5 id="延长作用域链">延长作用域链</h5><ul>
+<li>虽然执行环境的类型总共只有两种——全局和局部（函数），但还是有其他办法来延长作用域链。这么说是因为有些语句可以在作用域链的前端临时增加一个变量对象，该变量对象会在代码执行后被移除。在两种情况下会发生这种现象。具体来说，就是当执行流进入下列任何一个语句时，作用域链就会得到加长：<ul>
+<li><code>try-catch</code> 语句的 <code>catch</code> 块；</li>
+<li><code>with</code> 语句。</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//对于标准模式，可以通过使用下面任何一种文档类型来开启：</span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 严格型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 严格型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC</span><br><span class="line">"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- HTML 5 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"></span><br><span class="line">//而对于准标准模式，则可以通过使用过渡型（transitional）或框架集型（frameset）文档类型来触发，如下所示：</span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 过渡型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 框架集型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 过渡型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC</span><br><span class="line">"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 框架集型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="&lt;noscript&gt;&lt;/noscript&gt;标签"><code>&lt;noscript&gt;&lt;/noscript&gt;</code>标签</h3><ul>
-<li>定义不支持或者<code>javascript</code>被禁用显示的内容</li>
+</li>
+<li>这两个语句都会在作用域链的前端添加一个变量对象。对 <code>with</code> 语句来说，会将指定的对象添加到作用域链中。对 <code>catch</code> 语句来说，会创建一个新的变量对象，其中包含的是被抛出的错误对象的声明。</li>
 </ul>
+<h5 id="没有块级作用域">没有块级作用域</h5><ul>
+<li><code>JavaScript</code> 没有块级作用域经常会导致理解上的困惑。在其他类 <code>C</code> 的语言中，由花括号封闭的代码块都有自己的作用域（如果用 <code>ECMAScript</code> 的话来讲，就是它们自己的执行环境），因而支持根据条件来定义变量。</li>
+<li>但在 <code>JavaScript</code> 中， <code>if</code> 语句中的变量声明会将变量添加到当前的执行环境（在这里是全局环境）中。在使用 <code>for</code> 语句时尤其要牢记这一差异,对于有块级作用域的语言来说， <code>for</code> 语句初始化变量的表达式所定义的变量，只会存在于循环的环境之中。而对于 <code>JavaScript</code> 来说，由 <code>for</code> 语句创建的变量 <code>i</code> 即使在 <code>for</code> 循环执行结束后，也依旧会存在于循环外部的执行环境中。</li>
+</ul>
+<ol>
+<li>声明变量<ul>
+<li>使用 <code>var</code> 声明的变量会自动被添加到最接近的环境中。在函数内部，最接近的环境就是函数的局部环境；在 <code>with</code> 语句中，最接近的环境是函数环境。如果初始化变量时没有使用 <code>var</code> 声明，该变量会自动被添加到全局环境。</li>
+</ul>
+</li>
+<li>查询标识符<ul>
+<li>当在某个环境中为了读取或写入而引用一个标识符时，必须通过搜索来确定该标识符实际代表什么。搜索过程从作用域链的前端开始，向上逐级查询与给定名字匹配的标识符。如果在局部环境中找到了该标识符，搜索过程停止，变量就绪。如果在局部环境中没有找到该变量名，则继续沿作用域链向上搜索。搜索过程将一直追溯到全局环境的变量对象。如果在全局环境中也没有找到这个标识符，则意味着该变量尚未声明。</li>
+</ul>
+</li>
+</ol>
 </span>
       
     </div>
@@ -248,13 +240,11 @@ defer：可选。表示脚本可以延迟到文档">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/27/4/" rel="prev">Javascript的语法</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/21/2/" rel="next">兼容class的选择器</a>
+              <a href="/2015/11/08/12/" rel="next">Javascript的基本类型和引用类型的值</a>
             
           </div>
         </div>
@@ -280,8 +270,8 @@ defer：可选。表示脚本可以延迟到文档">
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/22/3/"
-                       data-title="Html中的script" data-url="http://guschen.github.io/2015/10/22/3/">
+                  <div class="ds-thread" data-thread-key="2015/11/09/13/"
+                       data-title="Javascript的执行环境及作用域" data-url="http://guschen.github.io/2015/11/09/13/">
                   </div>
                 
               </div>
@@ -400,7 +390,7 @@ defer：可选。表示脚本可以延迟到文档">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在html4-0定义的script的属性"><span class="nav-number">1.</span> <span class="nav-text">在html4.0定义的script的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签的位置"><span class="nav-number">2.</span> <span class="nav-text">标签的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在XHTML中的用法"><span class="nav-number">3.</span> <span class="nav-text">在XHTML中的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档模式"><span class="nav-number">4.</span> <span class="nav-text">文档模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#<noscript></noscript>标签"><span class="nav-number">5.</span> <span class="nav-text"><noscript></noscript>标签</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#延长作用域链"><span class="nav-number">1.</span> <span class="nav-text">延长作用域链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#没有块级作用域"><span class="nav-number">2.</span> <span class="nav-text">没有块级作用域</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
