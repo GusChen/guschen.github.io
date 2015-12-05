@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="小鱼博客,小鱼,小鱼Gus,GusChen,前端,web前端,Javascript,html5,css3,js,blog,技术博客" />
+  <meta name="keywords" content="Javascript基础," />
 
 
 
@@ -37,15 +37,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="记录学习点滴,分享前端知识">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小鱼Gus">
-<meta property="og:url" content="http://www.mycgx.com/index.html">
+<meta name="description" content="没有重载（深入理解）
+在js中函数是没有重载的概念的，如果你声明同样的函数或者变量，后者会覆盖前者
+
+function test()&amp;#123; alert(&apos;test1&apos;)&amp;#125;;function test()&amp;#123; alert(&apos;test2&apos;)&amp;#125;;test(); // test2
+函数声明与函数表达式
+在js中解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript的Function 类型">
+<meta property="og:url" content="http://www.mycgx.com/2015/11/25/Javascript的Function 类型/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="记录学习点滴,分享前端知识">
+<meta property="og:description" content="没有重载（深入理解）
+在js中函数是没有重载的概念的，如果你声明同样的函数或者变量，后者会覆盖前者
+
+function test()&amp;#123; alert(&apos;test1&apos;)&amp;#125;;function test()&amp;#123; alert(&apos;test2&apos;)&amp;#125;;test(); // test2
+函数声明与函数表达式
+在js中解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视">
+<meta property="og:updated_time" content="2015-12-05T03:57:00.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小鱼Gus">
-<meta name="twitter:description" content="记录学习点滴,分享前端知识">
+<meta name="twitter:title" content="Javascript的Function 类型">
+<meta name="twitter:description" content="没有重载（深入理解）
+在js中函数是没有重载的概念的，如果你声明同样的函数或者变量，后者会覆盖前者
+
+function test()&amp;#123; alert(&apos;test1&apos;)&amp;#125;;function test()&amp;#123; alert(&apos;test2&apos;)&amp;#125;;test(); // test2
+函数声明与函数表达式
+在js中解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -55,7 +71,7 @@
   };
 </script>
 
-    <title> 小鱼Gus </title>
+    <title> Javascript的Function 类型 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -81,9 +97,7 @@
 
 
 
-<div class="container one-column 
-   page-home 
-">
+<div class="container one-column page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="header-inner"><h1 class="site-meta">
@@ -157,9 +171,9 @@
         <div class="main-inner">
             <div id="content" class="content">
                 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -170,9 +184,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/25/Javascript的Function 类型/" itemprop="url">
-                Javascript的Function 类型
-              </a>
+              Javascript的Function 类型
             
           
         </h1>
@@ -207,8 +219,7 @@
       
 
       
-        
-          <span itemprop="articleBody"><h6 id="没有重载（深入理解）">没有重载（深入理解）</h6><ul>
+        <span itemprop="articleBody"><h6 id="没有重载（深入理解）">没有重载（深入理解）</h6><ul>
 <li>在js中函数是没有重载的概念的，如果你声明同样的函数或者变量，后者会覆盖前者</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">'test1'</span>)&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123; alert(<span class="string">'test2'</span>)&#125;;</span><br><span class="line">test(); <span class="comment">// test2</span></span><br></pre></td></tr></table></figure>
@@ -237,345 +248,57 @@
 </li>
 </ul>
 </span>
-        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
+        <div class="post-tags">
           
+            <a href="/tags/Javascript基础/" rel="tag">#Javascript基础</a>
           
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
             
-              <a class="post-title-link" href="/2015/11/24/Javascript的RegExp类型/" itemprop="url">
-                Javascript的RegExp类型
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-24T21:14:00+08:00" content="2015-11-24">
-            2015-11-24
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/24/Javascript的RegExp类型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/Javascript的RegExp类型/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p><code>ECMAScript</code> 通过 <code>RegExp</code> 类型来支持正则表达式。使用下面类似 <code>Perl</code> 的语法，就可以创建一个正则表达式。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> expression = <span class="regexp">/ pattern /</span> flags ;</span><br></pre></td></tr></table></figure></p>
-<p>其中的模式<code>pattern</code>部分可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、向前查找以及反向引用。每个正则表达式都可带有一或多个标志<code>flags</code>，用以标明正则表达式的行为。正则表达式的匹配模式支持下列 3 个标志。</p>
-<ul>
-<li><code>g</code>表示全局<code>global</code>模式，即模式将被应用于所有字符串，而非在发现第一个匹配项时立即停止；</li>
-<li><code>i</code>表示不区分大小写<code>case-insensitive</code>模式，即在确定匹配项时忽略模式与字符串的大小写；</li>
-<li><code>m</code>表示多行<code>multiline</code>模式，即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配字符串中所有"at"的实例</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern1 = <span class="regexp">/at/g</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配第一个"bat"或"cat"，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern2 = <span class="regexp">/[bc]at/i</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配所有以"at"结尾的 3 个字符的组合，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern3 = <span class="regexp">/.at/gi</span>;</span><br></pre></td></tr></table></figure>
-<p>与其他语言中的正则表达式类似，模式中使用的所有元字符都必须转义。正则表达式中的元字符包括：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">( [ &#123; \ ^ $ | ) ? * + .]&#125;</span><br></pre></td></tr></table></figure></p>
-<h6 id="RegExp实例属性">RegExp实例属性</h6><p>RegExp 的每个实例都具有下列属性，通过这些属性可以取得有关模式的各种信息。</p>
-<ul>
-<li><code>global</code>布尔值，表示是否设置了 <code>g</code> 标志。</li>
-<li><code>ignoreCase</code>布尔值，表示是否设置了 <code>i</code> 标志。</li>
-<li><code>lastIndex</code>整数，表示开始搜索下一个匹配项的字符位置，从 <code>0</code> 算起。</li>
-<li><code>multiline</code>布尔值，表示是否设置了 <code>m</code> 标志。</li>
-<li><code>source</code>正则表达式的字符串表示，按照字面量形式而非传入构造函数中的字符串模式返回。通过这些属性可以获知一个正则表达式的各方面信息，但却没有多大用处，因为这些信息全都包含在模式声明中。</li>
-</ul>
-<h6 id="RegExp实例方法">RegExp实例方法</h6><p><code>RegExp</code> 对象的主要方法是 <code>exec()</code>，该方法是专门为捕获组而设计的。 <code>exec()</code>接受一个参数，即要应用模式的字符串，然后返回包含第一个匹配项信息的数组；或者在没有匹配项的情况下返回 <code>null</code>。返回的数组虽然是 <code>Array</code> 的实例，但包含两个额外的属性： <code>index</code> 和 <code>input</code>。其中， <code>index</code> 表示匹配项在字符串中的位置，而 <code>input</code> 表示应用正则表达式的字符串。在数组中，第一项是与整个模式匹配的字符串，其他项是与模式中的捕获组匹配的字符串（如果模式中没有捕获组，则该数组只包含一项）。</p>
-<p>正则表达式的第二个方法是 <code>test()</code>，它接受一个字符串参数。在模式与该参数匹配的情况下返回<code>true</code>；否则，返回 <code>false</code>。在只想知道目标字符串与某个模式是否匹配，但不需要知道其文本内容的情况下，使用这个方法非常方便。</p>
-<p><code>RegExp</code> 实例继承的 <code>toLocaleString()</code>和 <code>toString()</code>方法都会返回正则表达式的字面量，与创建正则表达式的方式无关。</p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/19/Javascript的Date类型/" itemprop="url">
-                Javascript的Date类型
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-19T21:14:00+08:00" content="2015-11-19">
-            2015-11-19
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/19/Javascript的Date类型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Javascript的Date类型/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><code>ECMAScript</code> 中的 <code>Date</code> 类型是在早期 <code>Java</code> 中的 <code>java.util.Date</code> 类基础上构建的。为此， <code>Date</code>类型使用自 <code>UTC</code>（<code>Coordinated Universal Time</code>，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/19/Javascript的Date类型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
+          <div class="post-nav-next post-nav-item">
             
-              <a class="post-title-link" href="/2015/11/16/Javascript的Array类型/" itemprop="url">
-                Javascript的Array类型
-              </a>
+              <a href="/2015/11/24/Javascript的RegExp类型/" rel="next">Javascript的RegExp类型</a>
             
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-16T21:14:00+08:00" content="2015-11-16">
-            2015-11-16
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/16/Javascript的Array类型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/Javascript的Array类型/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>除了 <code>Object</code> 之外， <code>Array</code> 类型恐怕是 <code>ECMAScript</code> 中最常用的类型了。而且， <code>ECMAScript</code>中的数组与其他多数语言中的数组有着相当大的区别。虽然 <code>ECMAScript</code> 数组与其他语言中的数组都是数据的有序列表，但与其他语言不同的是， <code>ECMAScript</code> 数组的每一项可以保存任何类型的数据。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/16/Javascript的Array类型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/11/Javascript的Objcet类型/" itemprop="url">
-                Javascript的Objcet类型
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-11T22:14:00+08:00" content="2015-11-11">
-            2015-11-11
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/11/Javascript的Objcet类型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/11/Javascript的Objcet类型/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <ul>
-<li>到目前为止，我们看到的大多数引用类型值都是 <code>Object</code> 类型的实例；而且， <code>Object</code> 也是<code>ECMAScript</code> 中使用最多的一个类型。虽然 <code>Object</code> 的实例不具备多少功能，但对于在应用程序中存储和传输数据而言，它们确实是非常理想的选择。</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/11/Javascript的Objcet类型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
-  </nav>
+  </div>
 
 
             </div>
 
             
 
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/11/25/Javascript的Function 类型/"
+                       data-title="Javascript的Function 类型" data-url="http://www.mycgx.com/2015/11/25/Javascript的Function 类型/">
+                  </div>
+                
+              </div>
             
         </div>
 
@@ -592,6 +315,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -677,6 +409,17 @@
       </section>
 
       
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#没有重载（深入理解）"><span class="nav-number">1.</span> <span class="nav-text">没有重载（深入理解）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#函数声明与函数表达式"><span class="nav-number">2.</span> <span class="nav-text">函数声明与函数表达式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#作为值的函数"><span class="nav-number">3.</span> <span class="nav-text">作为值的函数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#函数内部属性"><span class="nav-number">4.</span> <span class="nav-text">函数内部属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#函数属性和方法"><span class="nav-number">5.</span> <span class="nav-text">函数属性和方法</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
 
     </div>
   </aside>
@@ -720,7 +463,7 @@
   
   
   
-  
+    
 
   
     
@@ -743,8 +486,8 @@
   	<script src="/js/hook-duoshuo.js"></script>
   
 
+    
   
-
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
@@ -763,6 +506,165 @@
   <script type="text/javascript" src="/js/search-toggle.js"></script>
 
 
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -774,31 +676,6 @@
 
 
 
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"guschen"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-    
-     
-  	<script src="/js/ua-parser.min.js"></script>
-  	<script src="/js/hook-duoshuo.js"></script>
-  
-
-  
 
 
 

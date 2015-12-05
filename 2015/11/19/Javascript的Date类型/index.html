@@ -1,0 +1,810 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+    <meta name="description" content="记录学习点滴,分享前端知识" />
+
+
+
+  <meta name="keywords" content="Javascript基础," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
+
+
+<meta name="description" content="ECMAScript 中的 Date 类型是在早期 Java 中的 java.util.Date 类基础上构建的。为此， Date类型使用自 UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript的Date类型">
+<meta property="og:url" content="http://www.mycgx.com/2015/11/19/Javascript的Date类型/index.html">
+<meta property="og:site_name" content="小鱼Gus">
+<meta property="og:description" content="ECMAScript 中的 Date 类型是在早期 Java 中的 java.util.Date 类基础上构建的。为此， Date类型使用自 UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。">
+<meta property="og:updated_time" content="2015-12-05T03:57:01.717Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript的Date类型">
+<meta name="twitter:description" content="ECMAScript 中的 Date 类型是在早期 Java 中的 java.util.Date 类基础上构建的。为此， Date类型使用自 UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+    <title> Javascript的Date类型 // 小鱼Gus </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f1a6474156526aad086138790cce05cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">小鱼Gus</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-demo">
+          <a href="/Demo" rel="section">
+            <i class="menu-item-icon icon-demo"></i> <br />
+            demo
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Javascript的Date类型
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-19T21:14:00+08:00" content="2015-11-19">
+            2015-11-19
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/19/Javascript的Date类型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Javascript的Date类型/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><code>ECMAScript</code> 中的 <code>Date</code> 类型是在早期 <code>Java</code> 中的 <code>java.util.Date</code> 类基础上构建的。为此， <code>Date</code>类型使用自 <code>UTC</code>（<code>Coordinated Universal Time</code>，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。</p>
+<a id="more"></a>
+<p>在调用 <code>Date</code> 构造函数而不传递参数的情况下，新创建的对象自动获得当前日期和时间。如果想根<br>据特定的日期和时间创建日期对象，必须传入表示该日期的毫秒数（即从 <code>UTC</code> 时间 1970 年 1 月 1 日午<br>夜起至该日期止经过的毫秒数）。为了简化这一计算过程， <code>ECMAScript</code> 提供了两个方法： <code>Date.parse()</code><br>和 <code>Date.UTC()</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(<span class="string">"May 25, 2004"</span>));</span><br><span class="line"><span class="comment">// GMT 时间 2000 年 1 月 1 日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</span><br><span class="line"><span class="comment">// GMT 时间 2005 年 5 月 5 日下午 5:55:55</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</span><br></pre></td></tr></table></figure>
+<p><code>ECMAScript 5</code> 添加了 <code>Data.now()</code>方法，返回表示调用这个方法时的日期和时间的毫秒数。支持 <code>Data.now()</code>方法的浏览器包括 <code>IE9+</code>、 <code>Firefox 3+</code>、 <code>Safari 3+</code>、 <code>Opera 10.5</code> 和 <code>Chrome</code>。在不支持它的浏览器中，使用<code>+</code>操作符把 <code>Data</code> 对象转换成字符串，也可以达到同样的目的。</p>
+<h6 id="继承的方法">继承的方法</h6><p>与其他引用类型一样， <code>Date</code> 类型也重写了 <code>toLocaleString()</code>、<code>toString()</code>和 <code>valueOf()</code>方法；但这些方法返回的值与其他类型中的方法不同。 <code>Date</code> 类型的 <code>toLocaleString()</code>方法会按照与浏览器设置的地区相适应的格式返回日期和时间。</p>
+<h6 id="日期格式化方法">日期格式化方法</h6><p><code>Date</code> 类型还有一些专门用于将日期格式化为字符串的方法，这些方法如下。</p>
+<ul>
+<li><code>toDateString()</code>——以特定于实现的格式显示星期几、月、日和年；</li>
+<li><code>toTimeString()</code>——以特定于实现的格式显示时、分、秒和时区；</li>
+<li><code>toLocaleDateString()</code>——以特定于地区的格式显示星期几、月、日和年；</li>
+<li><code>toLocaleTimeString()</code>——以特定于实现的格式显示时、分、秒；</li>
+<li><code>toUTCString()</code>——以特定于实现的格式完整的 UTC 日期。</li>
+</ul>
+<h6 id="日期/时间组件方法">日期/时间组件方法</h6><table>
+<thead>
+<tr>
+<th>方 法</th>
+<th>说 明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getTime()</td>
+<td>返回表示日期的毫秒数；与valueOf()方法返回的值相同</td>
+</tr>
+<tr>
+<td>setTime(毫秒)</td>
+<td>以毫秒数设置日期，会改变整个日期</td>
+</tr>
+<tr>
+<td>getFullYear()</td>
+<td>取得4位数的年份（如2007而非仅07）</td>
+</tr>
+<tr>
+<td>getUTCFullYear()</td>
+<td>返回UTC日期的4位数年份</td>
+</tr>
+<tr>
+<td>setFullYear(年)</td>
+<td>设置日期的年份。传入的年份值必须是4位数字（如2007而非仅07）</td>
+</tr>
+<tr>
+<td>setUTCFullYear(年)</td>
+<td>设置UTC日期的年份。传入的年份值必须是4位数字（如2007而非仅07）</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>返回日期中的月份，其中0表示一月， 11表示十二月</td>
+</tr>
+<tr>
+<td>getUTCMonth()</td>
+<td>返回UTC日期中的月份，其中0表示一月， 11表示十二月</td>
+</tr>
+<tr>
+<td>setMonth(月)</td>
+<td>设置日期的月份。传入的月份值必须大于0，超过11则增加年份</td>
+</tr>
+<tr>
+<td>setUTCMonth(月)</td>
+<td>设置UTC日期的月份。传入的月份值必须大于0，超过11则增加年份</td>
+</tr>
+<tr>
+<td>getDate()</td>
+<td>返回日期月份中的天数（1到31）</td>
+</tr>
+<tr>
+<td>getUTCDate()</td>
+<td>返回UTC日期月份中的天数（1到31）</td>
+</tr>
+<tr>
+<td>setDate(日)</td>
+<td>设置日期月份中的天数。如果传入的值超过了该月中应有的天数，则增加月份</td>
+</tr>
+<tr>
+<td>setUTCDate(日)</td>
+<td>设置UTC日期月份中的天数。如果传入的值超过了该月中应有的天数，则增加月份</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>返回日期中星期的星期几（其中0表示星期日， 6表示星期六）</td>
+</tr>
+<tr>
+<td>getUTCDay()</td>
+<td>返回UTC日期中星期的星期几（其中0表示星期日， 6表示星期六）</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>返回日期中的小时数（0到23）</td>
+</tr>
+<tr>
+<td>getUTCHours()</td>
+<td>返回UTC日期中的小时数（0到23）</td>
+</tr>
+<tr>
+<td>setHours(时)</td>
+<td>设置日期中的小时数。传入的值超过了23则增加月份中的天数</td>
+</tr>
+<tr>
+<td>setUTCHours(时)</td>
+<td>设置UTC日期中的小时数。传入的值超过了23则增加月份中的天数</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>返回日期中的分钟数（0到59）</td>
+</tr>
+<tr>
+<td>getUTCMinutes()</td>
+<td>返回UTC日期中的分钟数（0到59）</td>
+</tr>
+<tr>
+<td>setMinutes(分)</td>
+<td>设置日期中的分钟数。传入的值超过59则增加小时数</td>
+</tr>
+<tr>
+<td>setUTCMinutes(分)</td>
+<td>设置UTC日期中的分钟数。传入的值超过59则增加小时数</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>返回日期中的秒数（0到59）</td>
+</tr>
+<tr>
+<td>getUTCSeconds()</td>
+<td>返回UTC日期中的秒数（0到59）</td>
+</tr>
+<tr>
+<td>setSeconds(秒)</td>
+<td>设置日期中的秒数。传入的值超过了59会增加分钟数</td>
+</tr>
+<tr>
+<td>setUTCSeconds(秒)</td>
+<td>设置UTC日期中的秒数。传入的值超过了59会增加分钟数</td>
+</tr>
+<tr>
+<td>getMilliseconds()</td>
+<td>返回日期中的毫秒数</td>
+</tr>
+<tr>
+<td>getUTCMilliseconds()</td>
+<td>返回UTC日期中的毫秒数</td>
+</tr>
+<tr>
+<td>setMilliseconds(毫秒)</td>
+<td>设置日期中的毫秒数</td>
+</tr>
+<tr>
+<td>setUTCMilliseconds(毫秒)</td>
+<td>设置UTC日期中的毫秒数</td>
+</tr>
+<tr>
+<td>getTimezoneOffset()</td>
+<td>返回本地时间与UTC时间相差的分钟数。例如，美国东部标准时间返回300。在某地进入夏令时的情况下，这个值会有所变化</td>
+</tr>
+</tbody>
+</table>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript基础/" rel="tag">#Javascript基础</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/24/Javascript的RegExp类型/" rel="prev">Javascript的RegExp类型</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/16/Javascript的Array类型/" rel="next">Javascript的Array类型</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="2015/11/19/Javascript的Date类型/"
+                       data-title="Javascript的Date类型" data-url="http://www.mycgx.com/2015/11/19/Javascript的Date类型/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars2.githubusercontent.com/u/13878532?v=3&amp;s=460" alt="小鱼Gus" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">小鱼Gus</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">记录学习点滴,分享前端知识</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Guschen" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ie786Ofx-OfW6uHs58nv5vHk6ODlp_rm5A" target="_blank">email</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.51yimu.cn" target="_blank">随缘小栈</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.liuleiweb.com" target="_blank">E空间</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.qiushurong.cn" target="_blank">小树技术博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.thisck.com" target="_blank">ck博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.liusapp.com" target="_blank">流光博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.web1992.cn" target="_blank">er妞</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#继承的方法"><span class="nav-number">1.</span> <span class="nav-text">继承的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#日期格式化方法"><span class="nav-number">2.</span> <span class="nav-text">日期格式化方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#日期/时间组件方法"><span class="nav-number">3.</span> <span class="nav-text">日期/时间组件方法</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鱼Gus</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"guschen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
