@@ -170,6 +170,165 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/08/Javascript的基本类型和引用类型的值/" itemprop="url">
+                Javascript的基本类型和引用类型的值
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-08T10:45:00+08:00" content="2015-11-08">
+            2015-11-08
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/08/Javascript的基本类型和引用类型的值/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/08/Javascript的基本类型和引用类型的值/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <ul>
+<li><code>ECMAScript</code> 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。</li>
+<li>在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： <code>Undefined</code>、 <code>Null</code>、 <code>Boolean</code>、 <code>Number</code> 和 <code>String</code>。这 5 种基本数据类型是按值访问的，因为可以操作保存在变量中的实际的值。</li>
+<li>引用类型的值是保存在内存中的对象。与其他语言不同， <code>JavaScript</code> 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。为此，引用类型的值是按引用访问的。</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/08/Javascript的基本类型和引用类型的值/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/11/04/Javascript的函数/" itemprop="url">
+                Javascript的函数
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-04T22:40:03+08:00" content="2015-11-04">
+            2015-11-04
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/04/Javascript的函数/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Javascript的函数/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：<br><figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span><span class="params">(arg0, arg1,<span class="rest_arg">...,argN</span>)</span> </span>&#123;</span><br><span class="line">  statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>函数在碰到<code>return</code>的任何代码都永远不会执行。</li>
+<li><code>return</code> 后面可以带参数，也可以不带参。</li>
+</ul>
+<h6 id="参数问题">参数问题</h6><ul>
+<li><code>ECMAScript</code> 函数的参数与大多数其他语言中函数的参数有所不同。 <code>ECMAScript</code> 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。</li>
+<li><code>arguments</code> 对象只是与数组类似（它并不是 <code>Array</code> 的实例），因为可以使用方括号语法访问它的每一个元素（即第一个元素是 <code>arguments[0]</code>，第二个元素是 <code>argumetns[1]</code>，以此类推），使用 <code>length</code> 属性来确定传递进来多少个参数。</li>
+<li>在函数体内可以通过 <code>arguments</code> 对象来访问这个参数数组，从而获取传递给函数的每一个参数。</li>
+<li>通过访问 <code>arguments</code> 对象的 <code>length</code> 属性可以获知有多少个参数传递给了函数</li>
+</ul>
+<h6 id="没有重载">没有重载</h6><ul>
+<li><code>ECMAScript</code> 函数不能像传统意义上那样实现重载。而在其他语言（如 <code>Java</code>）中，可以为一个函数编写两个定义，只要这两个定义的签名（接受的参数的类型和数量）不同即可。如前所述， <code>ECMAScirpt</code>函数没有签名，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可能做到的。</li>
+</ul>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/11/03/Javascript的语句/" itemprop="url">
                 Javascript的语句
               </a>
@@ -395,210 +554,11 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/29/Javascript的变量/" itemprop="url">
-                Javascript的变量
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-29T21:22:26+08:00" content="2015-10-29">
-            2015-10-29
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/29/Javascript的变量/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/Javascript的变量/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <ul>
-<li><p><code>ECMAScript</code> 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。</p>
-</li>
-<li><p>定义变量时要使用<code>var</code>操作符（注意<code>var</code>是一个关键字），后跟变量名（即一个标识符）;</p>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/29/Javascript的变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/28/Javascript的关键字和保留字/" itemprop="url">
-                Javascript的关键字和保留字
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-28T13:54:15+08:00" content="2015-10-28">
-            2015-10-28
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/28/Javascript的关键字和保留字/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/28/Javascript的关键字和保留字/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <ul>
-<li>关键字（带<code>*</code>号上标的是第 5 版新增）</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>break</th>
-<th>do</th>
-<th>instanceof</th>
-<th>typeof</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>case</td>
-<td>else</td>
-<td>new</td>
-<td>var</td>
-</tr>
-<tr>
-<td>catch</td>
-<td>finally</td>
-<td>return</td>
-<td>void</td>
-</tr>
-<tr>
-<td>continue</td>
-<td>for</td>
-<td>switch</td>
-<td>while</td>
-</tr>
-<tr>
-<td>debugger*</td>
-<td>function</td>
-<td>this</td>
-<td>with</td>
-</tr>
-<tr>
-<td>default</td>
-<td>if</td>
-<td>throw</td>
-</tr>
-<tr>
-<td>delete</td>
-<td>in</td>
-<td>try</td>
-</tr>
-</tbody>
-</table>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/28/Javascript的关键字和保留字/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
   </nav>
 
 
@@ -633,7 +593,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -647,7 +607,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -718,8 +678,8 @@
         <div class="footer-inner">
             <div class="copyright" >
   
-  &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy; &nbsp;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>

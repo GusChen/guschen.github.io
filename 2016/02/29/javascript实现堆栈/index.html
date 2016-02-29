@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Javascript基础," />
+  <meta name="keywords" content="javascript算法," />
 
 
 
@@ -37,19 +37,37 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
-在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
+<meta name="description" content="偷懒了许久的第一篇博客(┙&amp;gt;∧&amp;lt;)┙へ┻┻
+
+在javascript中，Array是一个很好的数据存储格式，我们可以通过一些方法打造一个模拟的栈，实现堆栈（Stack）。
+
+
+Array的push方法可以模拟进栈
+
+Array的pop方法可以模拟出栈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript的基本类型和引用类型的值">
-<meta property="og:url" content="http://www.mycgx.com/2015/11/08/Javascript的基本类型和引用类型的值/index.html">
+<meta property="og:title" content="javascript实现堆栈">
+<meta property="og:url" content="http://www.mycgx.com/2016/02/29/javascript实现堆栈/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
-在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
-<meta property="og:updated_time" content="2015-12-05T03:57:09.628Z">
+<meta property="og:description" content="偷懒了许久的第一篇博客(┙&amp;gt;∧&amp;lt;)┙へ┻┻
+
+在javascript中，Array是一个很好的数据存储格式，我们可以通过一些方法打造一个模拟的栈，实现堆栈（Stack）。
+
+
+Array的push方法可以模拟进栈
+
+Array的pop方法可以模拟出栈">
+<meta property="og:updated_time" content="2016-02-29T13:20:02.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript的基本类型和引用类型的值">
-<meta name="twitter:description" content="ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。
-在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： Undefined、 Null、 Boolean、 Number 和 String。这 5 种基本数据类型是按值访问的，因为可以">
+<meta name="twitter:title" content="javascript实现堆栈">
+<meta name="twitter:description" content="偷懒了许久的第一篇博客(┙&amp;gt;∧&amp;lt;)┙へ┻┻
+
+在javascript中，Array是一个很好的数据存储格式，我们可以通过一些方法打造一个模拟的栈，实现堆栈（Stack）。
+
+
+Array的push方法可以模拟进栈
+
+Array的pop方法可以模拟出栈">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -59,7 +77,7 @@
   };
 </script>
 
-    <title> Javascript的基本类型和引用类型的值 // 小鱼Gus </title>
+    <title> javascript实现堆栈 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -172,7 +190,7 @@
           
           
             
-              Javascript的基本类型和引用类型的值
+              javascript实现堆栈
             
           
         </h1>
@@ -181,8 +199,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-08T10:45:00+08:00" content="2015-11-08">
-            2015-11-08
+          <time itemprop="dateCreated" datetime="2016-02-29T21:11:00+08:00" content="2016-02-29">
+            2016-02-29
           </time>
         </span>
 
@@ -192,8 +210,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/08/Javascript的基本类型和引用类型的值/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/08/Javascript的基本类型和引用类型的值/" itemprop="commentsCount"></span>
+              <a href="/2016/02/29/javascript实现堆栈/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/29/javascript实现堆栈/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -207,37 +225,18 @@
       
 
       
-        <span itemprop="articleBody"><ul>
-<li><code>ECMAScript</code> 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。</li>
-<li>在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： <code>Undefined</code>、 <code>Null</code>、 <code>Boolean</code>、 <code>Number</code> 和 <code>String</code>。这 5 种基本数据类型是按值访问的，因为可以操作保存在变量中的实际的值。</li>
-<li>引用类型的值是保存在内存中的对象。与其他语言不同， <code>JavaScript</code> 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。为此，引用类型的值是按引用访问的。</li>
+        <span itemprop="articleBody"><p>偷懒了许久的第一篇博客(┙&gt;∧&lt;)┙へ┻┻</p>
+<blockquote>
+<p>在<code>javascript</code>中，Array是一个很好的数据存储格式，我们可以通过一些方法打造一个模拟的栈，实现堆栈（Stack）。</p>
+</blockquote>
+<ul>
+<li><p>Array的push方法可以模拟进栈</p>
+</li>
+<li><p>Array的pop方法可以模拟出栈</p>
+</li>
 </ul>
 <a id="more"></a>
-<h5 id="动态的属性">动态的属性</h5><ul>
-<li>定义基本类型值和引用类型值的方式是类似的：创建一个变量并为该变量赋值。但是，当这个值保存到变量中以后，对不同类型值可以执行的操作则大相径庭。对于引用类型的值，我们可以为其添加属性和方法，也可以改变和删除其属性和方法。<h5 id="复制变量值">复制变量值</h5></li>
-<li>除了保存的方式不同之外，在从一个变量向另一个变量复制基本类型值和引用类型值时，也存在不同。如果从一个变量向另一个变量复制基本类型的值，会在变量对象上创建一个新值，然后把该值复制到为新变量分配的位置上。<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">var num1 = <span class="number">2l</span>;</span><br><span class="line">var num2 = num1;</span><br><span class="line">num2 = <span class="number">22</span>;</span><br><span class="line">console.<span class="built_in">log</span>(num1); <span class="comment">// 21</span></span><br><span class="line">console.<span class="built_in">log</span>(num1); <span class="comment">// 22</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>当从一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值复制一份放到为新变量分配的空间中。不同的是，这个值的副本实际上是一个指针，而这个指针指向存储在堆中的一个对象。复制操作结束后，两个变量实际上将引用同一个对象。因此，改变其中一个变量，就会影响另一个变量。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> obj2 = obj1;</span><br><span class="line">obj1.name = <span class="number">11</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj2.name); <span class="comment">//11</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="传递参数">传递参数</h5><ul>
-<li><code>ECMAScript</code> 中所有函数的参数都是按值传递的。也就是说，把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。基本类型值的传递如同基本类型变量的复制一样，而引用类型值的传递，则如同引用类型变量的复制一样。有不少开发人员在这一点上可能会感到困惑，因为访问变量有按值和按引用两种方式，而参数只能按值传递。</li>
-<li>在向参数传递基本类型的值时，被传递的值会被复制给一个局部变量（即命名参数，或者用<code>ECMAScript</code> 的概念来说，就是 <code>arguments</code> 对象中的一个元素）。在向参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量，因此这个局部变量的变化会反映在函数的外部。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//基本类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num + <span class="number">20</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> ret = add(num);</span><br><span class="line"><span class="built_in">console</span>.log(num); <span class="comment">//10</span></span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">//30</span></span><br><span class="line"><span class="comment">//引用类型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">  obj.name = <span class="string">'Guschen'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> ret2 = setName(obj);</span><br><span class="line"><span class="built_in">console</span>.log(ret2.name); <span class="comment">// Guschen</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.name); <span class="comment">// Guschen</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="检测类型">检测类型</h5><ul>
-<li><p><code>typeof</code> 操作符是最佳的工具。说得更具体一点， <code>typeof</code> 操作符是确定一个变量是字符串、数值、布尔值，还是 <code>undefined</code> 的最佳工具。如果变量的值是一个对象或 <code>null</code>，则 <code>typeof</code> 操作符会像下面例子中所示的那样返回<code>&quot;object&quot;</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"Nicholas"</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">22</span>;</span><br><span class="line"><span class="keyword">var</span> u;</span><br><span class="line"><span class="keyword">var</span> n = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">alert(<span class="keyword">typeof</span> s); <span class="comment">//string</span></span><br><span class="line">alert(<span class="keyword">typeof</span> i); <span class="comment">//number</span></span><br><span class="line">alert(<span class="keyword">typeof</span> b); <span class="comment">//boolean</span></span><br><span class="line">alert(<span class="keyword">typeof</span> u); <span class="comment">//undefined</span></span><br><span class="line">alert(<span class="keyword">typeof</span> n); <span class="comment">//object</span></span><br><span class="line">alert(<span class="keyword">typeof</span> o); <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>虽然在检测基本数据类型时 <code>typeof</code> 是非常得力的助手，但在检测引用类型的值时，这个操作符的用处不大。 通常， 我们并不是想知道某个值是对象，而是想知道它是什么类型的对象。为此， <code>ECMAScript</code>提供了 <code>instanceof</code> 操作符，其语法如下所示：</p>
-<figure class="highlight oxygene"><table><tr><td class="code"><pre><span class="line"><span class="keyword">result</span> = variable instanceof <span class="function"><span class="keyword">constructor</span></span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>根据规定，所有引用类型的值都是 <code>Object</code> 的实例。因此，在检测一个引用类型值和 Object 构造函数时， <code>instanceof</code> 操作符始终会返回 <code>true</code>。当然，如果使用 <code>instanceof</code> 操作符检测基本类型的值，则该操作符始终会返回 <code>false</code>，因为基本类型不是对象。</li>
-</ul>
+<h5 id="具体的实现代码如下">具体的实现代码如下</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//堆栈</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stack</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="comment">//新建一个空的栈</span></span><br><span class="line">	<span class="keyword">var</span> item = [];</span><br><span class="line">	<span class="comment">//添加新元素到栈顶</span></span><br><span class="line">	<span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">Function</span>.apply.call(item.push, item, <span class="built_in">arguments</span>);</span><br><span class="line">		<span class="comment">//item.push.apply(item,arguments);</span></span><br><span class="line">		<span class="comment">//item.push(element);</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//移除栈顶的元素，同时返回被移除的元素</span></span><br><span class="line">	<span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> item.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//返回栈顶的元素，不做任何操作</span></span><br><span class="line">	<span class="keyword">this</span>.peek = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> item[item.length-<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//判断栈里有没元素</span></span><br><span class="line">	<span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> item.length == <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//清除栈中所有元素</span></span><br><span class="line">	<span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		item = [];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//返回栈的元素个数</span></span><br><span class="line">	<span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> item.length;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//打印栈</span></span><br><span class="line">	<span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(item.toString());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> stack = <span class="keyword">new</span> Stack();</span><br><span class="line">stack.push(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></span><br><span class="line">stack.print(); <span class="comment">// 1,2,3</span></span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -246,7 +245,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Javascript基础/" rel="tag">#Javascript基础</a>
+            <a href="/tags/javascript算法/" rel="tag">#javascript算法</a>
           
         </div>
       
@@ -255,13 +254,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/09/Javascript的执行环境及作用域/" rel="prev">Javascript的执行环境及作用域</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/04/Javascript的函数/" rel="next">Javascript的函数</a>
+              <a href="/2015/12/16/1/" rel="next"></a>
             
           </div>
         </div>
@@ -287,8 +284,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/11/08/Javascript的基本类型和引用类型的值/"
-                       data-title="Javascript的基本类型和引用类型的值" data-url="http://www.mycgx.com/2015/11/08/Javascript的基本类型和引用类型的值/">
+                  <div class="ds-thread" data-thread-key="2016/02/29/javascript实现堆栈/"
+                       data-title="javascript实现堆栈" data-url="http://www.mycgx.com/2016/02/29/javascript实现堆栈/">
                   </div>
                 
               </div>
@@ -407,7 +404,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态的属性"><span class="nav-number">1.</span> <span class="nav-text">动态的属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#复制变量值"><span class="nav-number">2.</span> <span class="nav-text">复制变量值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#传递参数"><span class="nav-number">3.</span> <span class="nav-text">传递参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#检测类型"><span class="nav-number">4.</span> <span class="nav-text">检测类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#具体的实现代码如下"><span class="nav-number">1.</span> <span class="nav-text">具体的实现代码如下</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
