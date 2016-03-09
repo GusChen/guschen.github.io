@@ -170,6 +170,167 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/24/Javascript的RegExp类型/" itemprop="url">
+                Javascript的RegExp类型
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-24T21:14:00+08:00" content="2015-11-24">
+            2015-11-24
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/24/Javascript的RegExp类型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/Javascript的RegExp类型/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p><code>ECMAScript</code> 通过 <code>RegExp</code> 类型来支持正则表达式。使用下面类似 <code>Perl</code> 的语法，就可以创建一个正则表达式。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> expression = <span class="regexp">/ pattern /</span> flags ;</span><br></pre></td></tr></table></figure></p>
+<p>其中的模式<code>pattern</code>部分可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、向前查找以及反向引用。每个正则表达式都可带有一或多个标志<code>flags</code>，用以标明正则表达式的行为。正则表达式的匹配模式支持下列 3 个标志。</p>
+<ul>
+<li><code>g</code>表示全局<code>global</code>模式，即模式将被应用于所有字符串，而非在发现第一个匹配项时立即停止；</li>
+<li><code>i</code>表示不区分大小写<code>case-insensitive</code>模式，即在确定匹配项时忽略模式与字符串的大小写；</li>
+<li><code>m</code>表示多行<code>multiline</code>模式，即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配字符串中所有"at"的实例</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern1 = <span class="regexp">/at/g</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配第一个"bat"或"cat"，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern2 = <span class="regexp">/[bc]at/i</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配所有以"at"结尾的 3 个字符的组合，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern3 = <span class="regexp">/.at/gi</span>;</span><br></pre></td></tr></table></figure>
+<p>与其他语言中的正则表达式类似，模式中使用的所有元字符都必须转义。正则表达式中的元字符包括：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">( [ &#123; \ ^ $ | ) ? * + .]&#125;</span><br></pre></td></tr></table></figure></p>
+<h6 id="RegExp实例属性">RegExp实例属性</h6><p>RegExp 的每个实例都具有下列属性，通过这些属性可以取得有关模式的各种信息。</p>
+<ul>
+<li><code>global</code>布尔值，表示是否设置了 <code>g</code> 标志。</li>
+<li><code>ignoreCase</code>布尔值，表示是否设置了 <code>i</code> 标志。</li>
+<li><code>lastIndex</code>整数，表示开始搜索下一个匹配项的字符位置，从 <code>0</code> 算起。</li>
+<li><code>multiline</code>布尔值，表示是否设置了 <code>m</code> 标志。</li>
+<li><code>source</code>正则表达式的字符串表示，按照字面量形式而非传入构造函数中的字符串模式返回。通过这些属性可以获知一个正则表达式的各方面信息，但却没有多大用处，因为这些信息全都包含在模式声明中。</li>
+</ul>
+<h6 id="RegExp实例方法">RegExp实例方法</h6><p><code>RegExp</code> 对象的主要方法是 <code>exec()</code>，该方法是专门为捕获组而设计的。 <code>exec()</code>接受一个参数，即要应用模式的字符串，然后返回包含第一个匹配项信息的数组；或者在没有匹配项的情况下返回 <code>null</code>。返回的数组虽然是 <code>Array</code> 的实例，但包含两个额外的属性： <code>index</code> 和 <code>input</code>。其中， <code>index</code> 表示匹配项在字符串中的位置，而 <code>input</code> 表示应用正则表达式的字符串。在数组中，第一项是与整个模式匹配的字符串，其他项是与模式中的捕获组匹配的字符串（如果模式中没有捕获组，则该数组只包含一项）。</p>
+<p>正则表达式的第二个方法是 <code>test()</code>，它接受一个字符串参数。在模式与该参数匹配的情况下返回<code>true</code>；否则，返回 <code>false</code>。在只想知道目标字符串与某个模式是否匹配，但不需要知道其文本内容的情况下，使用这个方法非常方便。</p>
+<p><code>RegExp</code> 实例继承的 <code>toLocaleString()</code>和 <code>toString()</code>方法都会返回正则表达式的字面量，与创建正则表达式的方式无关。</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/11/19/Javascript的Date类型/" itemprop="url">
+                Javascript的Date类型
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-19T21:14:00+08:00" content="2015-11-19">
+            2015-11-19
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/19/Javascript的Date类型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/19/Javascript的Date类型/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><code>ECMAScript</code> 中的 <code>Date</code> 类型是在早期 <code>Java</code> 中的 <code>java.util.Date</code> 类基础上构建的。为此， <code>Date</code>类型使用自 <code>UTC</code>（<code>Coordinated Universal Time</code>，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/19/Javascript的Date类型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/11/16/Javascript的Array类型/" itemprop="url">
                 Javascript的Array类型
               </a>
@@ -383,168 +544,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/10/收藏网站/" itemprop="url">
-                收藏网站
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-10T18:00:00+08:00" content="2015-11-10">
-            2015-11-10
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/10/收藏网站/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/10/收藏网站/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><h4 id="Html5">Html5</h4><ul>
-<li><a href="http://caniuse.com" target="_blank" rel="external">html5属性支持–caniuse</a></li>
-</ul>
-<h4 id="Css3">Css3</h4><ul>
-<li><a href="http://isux.tencent.com/css3/tools.html" target="_blank" rel="external">腾讯isux-css3动画工具</a></li>
-</ul>
-<h4 id="Javascript">Javascript</h4><ul>
-<li><a href="http://jqapi.com" target="_blank" rel="external">jqapi在线手册</a></li>
-<li><a href="http://regexper.com/" target="_blank" rel="external">正则轨道图</a></li>
-</ul>
-<h4 id="UI">UI</h4><ul>
-<li><a href="http://www.yunrui.co/" target="_blank" rel="external">云端设计</a></li>
-<li><a href="http://www.uisdc.com/" target="_blank" rel="external">优设</a></li>
-</ul>
-<h4 id="Font">Font</h4><ul>
-<li><a href="http://font-spider.org/" target="_blank" rel="external">Font-Spider(字蛛)</a></li>
-</ul>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/09/Javascript的执行环境及作用域/" itemprop="url">
-                Javascript的执行环境及作用域
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-09T20:45:00+08:00" content="2015-11-09">
-            2015-11-09
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/09/Javascript的执行环境及作用域/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/Javascript的执行环境及作用域/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <ul>
-<li>执行环境（<code>execution context</code>，为简单起见，有时也称为“ 环境”）是 <code>JavaScript</code> 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象<code>variable object</code> ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。</li>
-<li>全局执行环境是最外围的一个执行环境。根据 <code>ECMAScript</code> 实现所在的宿主环境不同，表示执行环境的对象也不一样。在 <code>Web</code> 浏览器中，全局执行环境被认为是 <code>window</code> 对象 ，因此所有全局变量和函数都是作为 <code>window</code> 对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退出——例如关闭网页或浏览器——时才会被销毁）。</li>
-<li>每个函数都有自己的执行环境。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。 <code>ECMAScript</code> 程序中的执行流正是由这个方便的机制控制着。</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/09/Javascript的执行环境及作用域/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -584,7 +583,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -598,7 +597,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
