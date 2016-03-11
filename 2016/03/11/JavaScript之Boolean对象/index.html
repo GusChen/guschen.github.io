@@ -37,16 +37,28 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="RegExp对象的构造器">
+<meta name="description" content="Boolean对象的构造器
+new Boolean (value)
+
+
+如果Boolean构造函数的参数不是一个布尔值,则该参数会被转换成一个布尔值.如果参数是 0, -0,  null, false, NaN, undefined, 或者空字符串 (“”),生成的Boolean对象的值为false. 其他任何值,包括任何对象或者字符串”false”, 都会创建一个值为true的Boolean对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript之RegExp对象">
-<meta property="og:url" content="http://www.mycgx.com/2016/03/09/JavaScript之RegExp对象/index.html">
+<meta property="og:title" content="JavaScript之Boolean对象">
+<meta property="og:url" content="http://www.mycgx.com/2016/03/11/JavaScript之Boolean对象/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="RegExp对象的构造器">
-<meta property="og:updated_time" content="2016-03-09T13:10:25.732Z">
+<meta property="og:description" content="Boolean对象的构造器
+new Boolean (value)
+
+
+如果Boolean构造函数的参数不是一个布尔值,则该参数会被转换成一个布尔值.如果参数是 0, -0,  null, false, NaN, undefined, 或者空字符串 (“”),生成的Boolean对象的值为false. 其他任何值,包括任何对象或者字符串”false”, 都会创建一个值为true的Boolean对象">
+<meta property="og:updated_time" content="2016-03-11T14:16:30.709Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript之RegExp对象">
-<meta name="twitter:description" content="RegExp对象的构造器">
+<meta name="twitter:title" content="JavaScript之Boolean对象">
+<meta name="twitter:description" content="Boolean对象的构造器
+new Boolean (value)
+
+
+如果Boolean构造函数的参数不是一个布尔值,则该参数会被转换成一个布尔值.如果参数是 0, -0,  null, false, NaN, undefined, 或者空字符串 (“”),生成的Boolean对象的值为false. 其他任何值,包括任何对象或者字符串”false”, 都会创建一个值为true的Boolean对象">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +68,7 @@
   };
 </script>
 
-    <title> JavaScript之RegExp对象 // 小鱼Gus </title>
+    <title> JavaScript之Boolean对象 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -169,7 +181,7 @@
           
           
             
-              JavaScript之RegExp对象
+              JavaScript之Boolean对象
             
           
         </h1>
@@ -178,8 +190,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-03-09T21:18:40+08:00" content="2016-03-09">
-            2016-03-09
+          <time itemprop="dateCreated" datetime="2016-03-11T22:14:40+08:00" content="2016-03-11">
+            2016-03-11
           </time>
         </span>
 
@@ -189,8 +201,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/03/09/JavaScript之RegExp对象/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/JavaScript之RegExp对象/" itemprop="commentsCount"></span>
+              <a href="/2016/03/11/JavaScript之Boolean对象/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/11/JavaScript之Boolean对象/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -204,112 +216,42 @@
       
 
       
-        <span itemprop="articleBody"><h4 id="RegExp对象的构造器">RegExp对象的构造器</h4><a id="more"></a>
+        <span itemprop="articleBody"><h4 id="Boolean对象的构造器">Boolean对象的构造器</h4><blockquote>
+<p>new Boolean (value)</p>
+</blockquote>
+<ul>
+<li>如果Boolean构造函数的参数不是一个布尔值,则该参数会被转换成一个布尔值.如果参数是 0, -0,  null, false, NaN, undefined, 或者空字符串 (“”),生成的Boolean对象的值为false. 其他任何值,包括任何对象或者字符串”false”, 都会创建一个值为true的Boolean对象.</li>
+</ul>
+<a id="more"></a>
+<h4 id="Boolean对象构造器的属性">Boolean对象构造器的属性</h4><blockquote>
+<p>Boolean.prototype</p>
+</blockquote>
+<ul>
+<li>Boolean.prototype 的初始值是布尔原型对象。</li>
+</ul>
+<h4 id="Boolean原型对象的方法">Boolean原型对象的方法</h4><blockquote>
+<p>Boolean.prototype.constructor</p>
+</blockquote>
+<ul>
+<li>Boolean.prototype.constructor 的初始值是内置的 Boolean 构造器。</li>
+</ul>
 <blockquote>
-<p>new RegExp(pattern[, flags])</p>
+<p>Boolean.prototype.toString ( )</p>
 </blockquote>
 <ul>
-<li><p><strong>pattern</strong></p>
-<ul>
-<li>正则表达式文本</li>
-</ul>
-</li>
-<li><p><strong>flags</strong></p>
-<ul>
-<li>该参数可以是下面几个值的任意组合：</li>
-</ul>
-<ol>
-<li><p><strong>g</strong></p>
-<p> 全局匹配</p>
-</li>
-<li><p><strong>i</strong></p>
-<p> 忽略大小写</p>
-</li>
-<li><p><strong>m</strong></p>
-<p> 让开始和结束字符（^ 和 $）工作在多行模式（也就是，^ 和 $ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。</p>
-</li>
-</ol>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下面的表达式是等价的</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/ab+c/i</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"ab+c"</span>, <span class="string">"i"</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="RegExp的构造器的属性">RegExp的构造器的属性</h4><blockquote>
-<p>RegExp.prototype</p>
-</blockquote>
-<ul>
-<li>RegExp.prototype的初始值为RegExp的原型</li>
-</ul>
-<h4 id="RegExp的实例的属性">RegExp的实例的属性</h4><blockquote>
-<p>source</p>
-</blockquote>
-<ul>
-<li><p>返回一个值为当前正则表达式对象的模式文本的字符串，该字符串不会包含正则字面量两边的斜杠以及任何的标志字符。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/fooBar/ig</span>;</span><br><span class="line"><span class="built_in">console</span>.log(regex.source); <span class="comment">// "fooBar"，不包含 /.../ 和 "ig"。</span></span><br></pre></td></tr></table></figure>
+<li><p>返回指定的布尔对象的字符串形式。</p>
+  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> flag = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>)</span><br><span class="line"><span class="keyword">var</span> myVar = flag.toString() <span class="comment">// "true"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
-<p>global</p>
+<p>Boolean.prototype.valueOf ( )</p>
 </blockquote>
 <ul>
-<li>表明正则表达式是否使用了 “g” 标志。global 是一个正则表达式实例的只读属性。</li>
-<li><p>global 的值是布尔对象，如果使用了 “g” 标志，则返回 true；否则返回 false。 “g” 标志意味着正则表达式应该测试字符串中所有可能的匹配。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"g"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.global) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<li><p>返回一个Boolean对象的原始值（primitive value）。</p>
+  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> flag = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">null</span>);</span><br><span class="line"><span class="keyword">var</span> myVar = flag.valueOf(); <span class="comment">// "false"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<blockquote>
-<p>ignoreCase</p>
-</blockquote>
-<ul>
-<li>表明正则表达式是否使用了 “i” 标志。ignoreCase 是正则表达式实例的只读属性。</li>
-<li><p>ignoreCase 的值是布尔对象，如果使用了”i” 标志，则返回 true；否则，返回 false。”i” 标志意味着在字符串进行匹配时，应该忽略大小写。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"i"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.ignoreCase) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>multiline</p>
-</blockquote>
-<ul>
-<li>表明正则表达式是否使用了 “m” 标志。multiline 是正则表达式实例的一个只读属性。</li>
-<li><p>multiline 是一个布尔对象，如果使用了 “m” 标志，则返回 true；否则，返回 false。”m” 标志意味着一个多行输入字符串被看作多行。例如，使用 “m”，”^” 和 “$” 将会从只匹配正则字符串的开头或结尾，变为匹配字符串中任一行的开头或结尾。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"m"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.multiline) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>lastIndex</p>
-</blockquote>
-<ul>
-<li>正则表达式的一个可读可写的整型属性，用来指定下一次匹配的起始索引。 </li>
-</ul>
-<h4 id="RegExp的原型对象的方法">RegExp的原型对象的方法</h4><blockquote>
-<p>RegExp.prototype.constructor</p>
-</blockquote>
-<ul>
-<li>RegExp.prototype.constructor 的初始值为内置 RegExp 构造器。</li>
-</ul>
-<blockquote>
-<p>RegExp.prototype.exec(string)</p>
-</blockquote>
-<ul>
-<li><p>为指定的一段字符串执行搜索匹配操作。它的返回值是一个数组或者 null。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</span><br><span class="line">re.exec(str); <span class="comment">// ["abc"]</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>RegExp.prototype.test(string)</p>
-</blockquote>
-<ul>
-<li><p>执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 true 或 false。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</span><br><span class="line">re.test(str); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>RegExp.prototype.toString()</p>
-</blockquote>
-<ul>
-<li><p>返回一个表示该正则表达式的字符串。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(re.toString()); <span class="comment">// /abc/i</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="external">火狐标准库</a></strong></p>
+<p><strong>参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" rel="external">火狐标准库</a></strong></p>
 </span>
       
     </div>
@@ -327,13 +269,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/11/JavaScript之Boolean对象/" rel="prev">JavaScript之Boolean对象</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/08/JavaScript之Date对象/" rel="next">JavaScript之Date对象</a>
+              <a href="/2016/03/09/JavaScript之RegExp对象/" rel="next">JavaScript之RegExp对象</a>
             
           </div>
         </div>
@@ -359,8 +299,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2016/03/09/JavaScript之RegExp对象/"
-                       data-title="JavaScript之RegExp对象" data-url="http://www.mycgx.com/2016/03/09/JavaScript之RegExp对象/">
+                  <div class="ds-thread" data-thread-key="2016/03/11/JavaScript之Boolean对象/"
+                       data-title="JavaScript之Boolean对象" data-url="http://www.mycgx.com/2016/03/11/JavaScript之Boolean对象/">
                   </div>
                 
               </div>
@@ -479,7 +419,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp对象的构造器"><span class="nav-number">1.</span> <span class="nav-text">RegExp对象的构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp的构造器的属性"><span class="nav-number">2.</span> <span class="nav-text">RegExp的构造器的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp的实例的属性"><span class="nav-number">3.</span> <span class="nav-text">RegExp的实例的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RegExp的原型对象的方法"><span class="nav-number">4.</span> <span class="nav-text">RegExp的原型对象的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean对象的构造器"><span class="nav-number">1.</span> <span class="nav-text">Boolean对象的构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean对象构造器的属性"><span class="nav-number">2.</span> <span class="nav-text">Boolean对象构造器的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean原型对象的方法"><span class="nav-number">3.</span> <span class="nav-text">Boolean原型对象的方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
