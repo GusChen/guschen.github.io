@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Javascript基础," />
+  <meta name="keywords" content="CSS3,前端动画," />
 
 
 
@@ -37,31 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
+<meta name="description" content="CSS3 animation属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Html中的script">
-<meta property="og:url" content="http://www.mycgx.com/2015/10/22/Html中的script/index.html">
+<meta property="og:title" content="CSS3 animation属性">
+<meta property="og:url" content="http://www.mycgx.com/2016/03/22/CSS3 animation属性/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
-<meta property="og:updated_time" content="2015-12-05T03:57:13.940Z">
+<meta property="og:description" content="CSS3 animation属性">
+<meta property="og:updated_time" content="2016-03-22T14:29:56.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Html中的script">
-<meta name="twitter:description" content="在html4.0定义的script的属性
-async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 async 的脚本并不保证按照指定它们的先后顺序执行。
-
-charset：可选。表示通过 src 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
-
-defer：可选。表示脚本可以延迟到文档">
+<meta name="twitter:title" content="CSS3 animation属性">
+<meta name="twitter:description" content="CSS3 animation属性">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -71,7 +56,7 @@ defer：可选。表示脚本可以延迟到文档">
   };
 </script>
 
-    <title> Html中的script // 小鱼Gus </title>
+    <title> CSS3 animation属性 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -184,7 +169,7 @@ defer：可选。表示脚本可以延迟到文档">
           
           
             
-              Html中的script
+              CSS3 animation属性
             
           
         </h1>
@@ -193,8 +178,8 @@ defer：可选。表示脚本可以延迟到文档">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-22T20:57:05+08:00" content="2015-10-22">
-            2015-10-22
+          <time itemprop="dateCreated" datetime="2016-03-22T21:20:03+08:00" content="2016-03-22">
+            2016-03-22
           </time>
         </span>
 
@@ -204,8 +189,8 @@ defer：可选。表示脚本可以延迟到文档">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/10/22/Html中的script/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/22/Html中的script/" itemprop="commentsCount"></span>
+              <a href="/2016/03/22/CSS3 animation属性/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/22/CSS3 animation属性/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -219,34 +204,74 @@ defer：可选。表示脚本可以延迟到文档">
       
 
       
-        <span itemprop="articleBody"><h3 id="在html4-0定义的script的属性">在html4.0定义的<code>script</code>的属性</h3><ul>
-<li><p><code>async</code>：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。但是标记为 <code>async</code> 的脚本并不保证按照指定它们的先后顺序执行。</p>
-</li>
-<li><p><code>charset</code>：可选。表示通过 <code>src</code> 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。</p>
-</li>
-<li><p><code>defer</code>：可选。表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。 IE7 及更早版本对嵌入脚本也支持这个属性。</p>
-</li>
-<li><p><code>language</code>：已废弃。原来用于表示编写代码使用的脚本语言（如 <code>JavaScript</code>、<code>JavaScript1.2</code>或 <code>VBScript</code>）。大多数浏览器会忽略这个属性，因此也没有必要再用了。</p>
-</li>
-<li><p><code>src</code>：可选。表示包含要执行代码的外部文件。</p>
-</li>
-<li><p><code>type</code>：可选。可以看成是 <code>language</code> 的替代属性；表示编写代码使用的脚本语言的内容类型（也称为 <code>MIME</code> 类型）。虽然 <code>text/javascript</code> 和 <code>text/ecmascript</code> 都已经不被推荐使用，但人们一直以来使用的都还是 <code>text/javascript</code>。实际上，服务器在传送 <code>JavaScript</code> 文件时使用的MIME 类型通常是 <code>application/x–javascript</code>，但在 <code>type</code> 中设置这个值却可能导致脚本被忽略。另外，在非 IE浏览器中还可以使用以下值：<code>application/javascript</code> 和 <code>application/ecmascript</code>。考虑到约定俗成和最大限度的浏览器兼容性，目前 <code>type</code> 属性的值依旧还是<code>text/javascript</code>。不过，这个属性并不是必需的，如果没有指定这个属性，则其默认值仍为<code>text/javascript</code>。</p>
-</li>
-</ul>
-<a id="more"></a>
-<h3 id="标签的位置">标签的位置</h3><p>按照传统的做法，所有<code>script</code>元素都应该放在页面的<code>head</code>元素中，例如：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>Example HTML Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 这里放内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>现代 Web 应用程序一般都把全部 JavaScript 引用放在<body>元素中页面内容的后面，如下例所示：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>Example HTML Page<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 这里放内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure></body></p>
-<h3 id="在XHTML中的用法">在XHTML中的用法</h3><ul>
-<li>这里比较语句 <code>a &lt; b</code> 中的小于号 <code>&lt;</code>在 XHTML 中将被当作开始一个新标签来解析。但是作为标签来讲，小于号后面不能跟空格，因此就会导致语法错误。需要替换成 <code>&amp;lt;</code>，或者是使用<code>CData</code>片段</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="handlebars"><span class="xml"><span class="cdata">&lt;![CDATA[</span><br><span class="line">//代码</span><br><span class="line">]]&gt;</span></span></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="文档模式">文档模式</h3><ul>
-<li>ie中存在的文档模式会影响到页面的<code>css</code>和<code>js</code>的渲染，文档模式是： 混杂模式(又称为怪癖模式)<code>quirks mode</code>和标准模式<code>standards mode</code>。</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">//对于标准模式，可以通过使用下面任何一种文档类型来开启：</span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 严格型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 严格型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC</span><br><span class="line">"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- HTML 5 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"></span><br><span class="line">//而对于准标准模式，则可以通过使用过渡型（transitional）或框架集型（frameset）文档类型来触发，如下所示：</span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 过渡型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- HTML 4.01 框架集型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 过渡型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC</span><br><span class="line">"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- XHTML 1.0 框架集型 --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="&lt;noscript&gt;&lt;/noscript&gt;标签"><code>&lt;noscript&gt;&lt;/noscript&gt;</code>标签</h3><ul>
-<li>定义不支持或者<code>javascript</code>被禁用显示的内容</li>
-</ul>
+        <span itemprop="articleBody"><h4 id="CSS3_animation属性">CSS3 animation属性</h4><a id="more"></a>
+<hr>
+<h5 id="animation包含以下属性">animation包含以下属性</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">属性名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">animation-name</td>
+<td style="text-align:left">动画的名称</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-duration</td>
+<td style="text-align:left">规定完成动画所花费的时间，以秒或毫秒计,例如<code>.1s</code>、<code>1s</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-timing-function</td>
+<td style="text-align:left">规定动画的速度曲线,默认为<code>ease</code>,可选参数<code>linear</code>、    <code>ease</code>、    <code>ease-in</code>、<code>ease-out</code>、<code>ease-in-out</code>、<code>cubic-bezier(n,n,n,n)</code>、<code>steps([n &amp;#124; start &amp;#124; end],[n &amp;#124; start &amp;#124; end])</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-delay</td>
+<td style="text-align:left">规定动画何时开始,默认为<code>0s</code></td>
+</tr>
+<tr>
+<td style="text-align:left">animation-iteration-count</td>
+<td style="text-align:left">规定动画被播放的次数,默认为<code>1</code>，<code>infinite</code>则为循环播放。</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-direction</td>
+<td style="text-align:left">规定动画是否在下一周期逆向地播放。默认是 <code>normal</code>，<code>alternate</code>则逆向播放。</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-play-state</td>
+<td style="text-align:left">规定动画是否正在运行或暂停。默认是 “running”，<code>paused</code>则暂停，可以通过js控制。</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-fill-mode</td>
+<td style="text-align:left">规定对象动画时间之外的状态。默认为<code>none</code>,可选参数有<code>none</code> 、 <code>forwards</code> 、 <code>backwards</code> 、 <code>both</code></td>
+</tr>
+</tbody>
+</table>
+<p>参考<a href="http://www.w3school.com.cn/css3/css3_animation.asp" target="_blank" rel="external">w3school</a></p>
+<h5 id="keyframes的语法规则">keyframes的语法规则</h5><p><code>@keyframes animationname {keyframes-selector {css-styles;}}</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">animationname</th>
+<th style="text-align:left">必需。定义动画的名称。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">keyframes-selector</td>
+<td style="text-align:left"><code>0-100%</code>、<code>from</code>（与<code>0%</code> 相同）<code>to</code>（与 <code>100%</code> 相同）</td>
+</tr>
+<tr>
+<td style="text-align:left">css-styles</td>
+<td style="text-align:left">一个或多个合法的 CSS 样式属性。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="一个简单的例子demo">一个简单的例子<a href="http://www.mycgx.com/Demo/Blog_demo/Animation_demo/animation-01.html">demo</a></h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="class">.test</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-name</span>:<span class="value">test-animation</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-duration</span>:<span class="value"> <span class="number">1s</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-timing-function</span>:<span class="value"> linear</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-delay</span>:<span class="value"> <span class="number">0s</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-iteration-count</span>:<span class="value"><span class="number">1</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-direction</span>:<span class="value">forwards</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-play-state</span>:<span class="value">running</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">animation-fill-mode</span>:<span class="value">none</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">keyframes</span> test-animation </span>&#123;</span><br><span class="line">	<span class="tag">from</span> <span class="rules">&#123;<span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0px</span></span></span>;&#125;</span></span><br><span class="line">	<span class="tag">to</span> <span class="rules">&#123;<span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码可以简写为<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="class">.test</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">animation</span>:<span class="value">test-animation <span class="number">1s</span> linear forwards</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>在这里还要提及一个比较特殊的方法<code>steps</code>,这个方法可以使动画根据我们定义的帧数进行。例如修改上面的代码为<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="class">.test</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">animation</span>:<span class="value">test-animation <span class="number">1s</span> <span class="function">steps</span>(<span class="number">4</span>,end) forwards</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>会是得动画的变成4个步骤执行<a href="http://www.mycgx.com/Demo/Blog_demo/Animation_demo/animation-02.html">demo</a></p>
 </span>
       
     </div>
@@ -255,7 +280,9 @@ defer：可选。表示脚本可以延迟到文档">
       
         <div class="post-tags">
           
-            <a href="/tags/Javascript基础/" rel="tag">#Javascript基础</a>
+            <a href="/tags/CSS3/" rel="tag">#CSS3</a>
+          
+            <a href="/tags/前端动画/" rel="tag">#前端动画</a>
           
         </div>
       
@@ -264,13 +291,13 @@ defer：可选。表示脚本可以延迟到文档">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/27/Javascript的语法/" rel="prev">Javascript的语法</a>
+              <a href="/2016/03/22/前端动画的实现/" rel="prev">前端动画的实现</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/21/兼容class的选择器/" rel="next">兼容class的选择器</a>
+              <a href="/2016/03/15/JavaScript之Math对象/" rel="next">JavaScript之Math对象</a>
             
           </div>
         </div>
@@ -296,8 +323,8 @@ defer：可选。表示脚本可以延迟到文档">
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="2015/10/22/Html中的script/"
-                       data-title="Html中的script" data-url="http://www.mycgx.com/2015/10/22/Html中的script/">
+                  <div class="ds-thread" data-thread-key="2016/03/22/CSS3 animation属性/"
+                       data-title="CSS3 animation属性" data-url="http://www.mycgx.com/2016/03/22/CSS3 animation属性/">
                   </div>
                 
               </div>
@@ -416,7 +443,7 @@ defer：可选。表示脚本可以延迟到文档">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在html4-0定义的script的属性"><span class="nav-number">1.</span> <span class="nav-text">在html4.0定义的script的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签的位置"><span class="nav-number">2.</span> <span class="nav-text">标签的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在XHTML中的用法"><span class="nav-number">3.</span> <span class="nav-text">在XHTML中的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档模式"><span class="nav-number">4.</span> <span class="nav-text">文档模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#<noscript></noscript>标签"><span class="nav-number">5.</span> <span class="nav-text"><noscript></noscript>标签</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3_animation属性"><span class="nav-number">1.</span> <span class="nav-text">CSS3 animation属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#animation包含以下属性"><span class="nav-number">1.1.</span> <span class="nav-text">animation包含以下属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#keyframes的语法规则"><span class="nav-number">1.2.</span> <span class="nav-text">keyframes的语法规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一个简单的例子demo"><span class="nav-number">1.3.</span> <span class="nav-text">一个简单的例子demo</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -170,6 +170,160 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/09/Javascript的执行环境及作用域/" itemprop="url">
+                Javascript的执行环境及作用域
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-09T20:45:00+08:00" content="2015-11-09">
+            2015-11-09
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/09/Javascript的执行环境及作用域/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/09/Javascript的执行环境及作用域/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <ul>
+<li>执行环境（<code>execution context</code>，为简单起见，有时也称为“ 环境”）是 <code>JavaScript</code> 中最为重要的一个概念。执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象<code>variable object</code> ，环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。</li>
+<li>全局执行环境是最外围的一个执行环境。根据 <code>ECMAScript</code> 实现所在的宿主环境不同，表示执行环境的对象也不一样。在 <code>Web</code> 浏览器中，全局执行环境被认为是 <code>window</code> 对象 ，因此所有全局变量和函数都是作为 <code>window</code> 对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退出——例如关闭网页或浏览器——时才会被销毁）。</li>
+<li>每个函数都有自己的执行环境。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。 <code>ECMAScript</code> 程序中的执行流正是由这个方便的机制控制着。</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/09/Javascript的执行环境及作用域/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/11/08/Javascript的基本类型和引用类型的值/" itemprop="url">
+                Javascript的基本类型和引用类型的值
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-08T10:45:00+08:00" content="2015-11-08">
+            2015-11-08
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/08/Javascript的基本类型和引用类型的值/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/08/Javascript的基本类型和引用类型的值/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <ul>
+<li><code>ECMAScript</code> 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。 基本类型值指的是简单的数据段，而引用类型值指那些可能由多个值构成的对象。</li>
+<li>在将一个值赋给变量时，解析器必须确定这个值是基本类型值还是引用类型值。javascript的 5 种基本数据类型： <code>Undefined</code>、 <code>Null</code>、 <code>Boolean</code>、 <code>Number</code> 和 <code>String</code>。这 5 种基本数据类型是按值访问的，因为可以操作保存在变量中的实际的值。</li>
+<li>引用类型的值是保存在内存中的对象。与其他语言不同， <code>JavaScript</code> 不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。为此，引用类型的值是按引用访问的。</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/08/Javascript的基本类型和引用类型的值/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/11/04/Javascript的函数/" itemprop="url">
                 Javascript的函数
               </a>
@@ -396,170 +550,11 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/31/Javascript的数据类型/" itemprop="url">
-                Javascript的数据类型
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-31T21:40:03+08:00" content="2015-10-31">
-            2015-10-31
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/31/Javascript的数据类型/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/31/Javascript的数据类型/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h5 id="typeof操作符">typeof操作符</h5><p>   typeof操作符和检测变量类型</p>
-<ul>
-<li><code>undefined</code>——如果这个值未定义；</li>
-<li><code>boolean</code>——如果这个值是布尔值；</li>
-<li><code>string</code>——如果这个值是字符串；</li>
-<li><code>number</code>——如果这个值是数值；</li>
-<li><code>object</code>——如果这个值是对象或<code>null</code>；</li>
-<li><code>function</code>——如果这个值是函数。</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/31/Javascript的数据类型/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/29/Javascript的变量/" itemprop="url">
-                Javascript的变量
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-29T21:22:26+08:00" content="2015-10-29">
-            2015-10-29
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/10/29/Javascript的变量/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/Javascript的变量/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <ul>
-<li><p><code>ECMAScript</code> 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。</p>
-</li>
-<li><p>定义变量时要使用<code>var</code>操作符（注意<code>var</code>是一个关键字），后跟变量名（即一个标识符）;</p>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/29/Javascript的变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">&raquo;</a>
   </nav>
 
 
@@ -594,7 +589,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -608,7 +603,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
