@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://www.mycgx.com/JavaScriptAPI/JavaScript之RegExp对象/index.html">
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="RegExp对象的构造器">
-<meta property="og:updated_time" content="2016-03-23T05:11:55.628Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之RegExp对象">
 <meta name="twitter:description" content="RegExp对象的构造器">
@@ -250,7 +250,7 @@
 </ol>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下面的表达式是等价的</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/ab+c/i</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"ab+c"</span>, <span class="string">"i"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">//下面的表达式是等价的</span></div><div class="line"><span class="keyword">var</span> re = <span class="regexp">/ab+c/i</span>;</div><div class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"ab+c"</span>, <span class="string">"i"</span>);</div></pre></td></tr></table></figure>
 <h4 id="RegExp的构造器的属性"><a href="#RegExp的构造器的属性" class="headerlink" title="RegExp的构造器的属性"></a>RegExp的构造器的属性</h4><blockquote>
 <p>RegExp.prototype</p>
 </blockquote>
@@ -262,7 +262,7 @@
 </blockquote>
 <ul>
 <li><p>返回一个值为当前正则表达式对象的模式文本的字符串，该字符串不会包含正则字面量两边的斜杠以及任何的标志字符。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/fooBar/ig</span>;</span><br><span class="line"><span class="built_in">console</span>.log(regex.source); <span class="comment">// "fooBar"，不包含 /.../ 和 "ig"。</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> regex = <span class="regexp">/fooBar/ig</span>;</div><div class="line"><span class="built_in">console</span>.log(regex.source); <span class="comment">// "fooBar"，不包含 /.../ 和 "ig"。</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -271,7 +271,7 @@
 <ul>
 <li>表明正则表达式是否使用了 “g” 标志。global 是一个正则表达式实例的只读属性。</li>
 <li><p>global 的值是布尔对象，如果使用了 “g” 标志，则返回 true；否则返回 false。 “g” 标志意味着正则表达式应该测试字符串中所有可能的匹配。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"g"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.global) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"g"</span>)</div><div class="line"><span class="built_in">console</span>.log(regex.global) <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -280,7 +280,7 @@
 <ul>
 <li>表明正则表达式是否使用了 “i” 标志。ignoreCase 是正则表达式实例的只读属性。</li>
 <li><p>ignoreCase 的值是布尔对象，如果使用了”i” 标志，则返回 true；否则，返回 false。”i” 标志意味着在字符串进行匹配时，应该忽略大小写。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"i"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.ignoreCase) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"i"</span>)</div><div class="line"><span class="built_in">console</span>.log(regex.ignoreCase) <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -289,7 +289,7 @@
 <ul>
 <li>表明正则表达式是否使用了 “m” 标志。multiline 是正则表达式实例的一个只读属性。</li>
 <li><p>multiline 是一个布尔对象，如果使用了 “m” 标志，则返回 true；否则，返回 false。”m” 标志意味着一个多行输入字符串被看作多行。例如，使用 “m”，”^” 和 “$” 将会从只匹配正则字符串的开头或结尾，变为匹配字符串中任一行的开头或结尾。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"m"</span>)</span><br><span class="line"><span class="built_in">console</span>.log(regex.multiline) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"foo"</span>, <span class="string">"m"</span>)</div><div class="line"><span class="built_in">console</span>.log(regex.multiline) <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -309,7 +309,7 @@
 </blockquote>
 <ul>
 <li><p>为指定的一段字符串执行搜索匹配操作。它的返回值是一个数组或者 null。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</span><br><span class="line">re.exec(str); <span class="comment">// ["abc"]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</div><div class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</div><div class="line">re.exec(str); <span class="comment">// ["abc"]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -317,7 +317,7 @@
 </blockquote>
 <ul>
 <li><p>执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 true 或 false。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</span><br><span class="line">re.test(str); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> RexExp(<span class="string">"abc"</span>, <span class="string">"i"</span>);</div><div class="line"><span class="keyword">var</span> str = <span class="string">"abc16"</span>;</div><div class="line">re.test(str); <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -325,7 +325,7 @@
 </blockquote>
 <ul>
 <li><p>返回一个表示该正则表达式的字符串。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"abc"</span>, <span class="string">"i"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(re.toString()); <span class="comment">// /abc/i</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"abc"</span>, <span class="string">"i"</span>);</div><div class="line"><span class="built_in">console</span>.log(re.toString()); <span class="comment">// /abc/i</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><strong>参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="external">火狐标准库</a></strong></p>
@@ -419,7 +419,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

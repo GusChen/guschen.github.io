@@ -45,7 +45,7 @@
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="ECMAScript 通过 RegExp 类型来支持正则表达式。使用下面类似 Perl 的语法，就可以创建一个正则表达式。var expression = / pattern / flags ;
 其中的模式pattern部分可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、向前查找以及反向引用。每个正则表达式都可带有一或多个标志flags，用以标明正则表达式的行为。正则表达式的匹配模">
-<meta property="og:updated_time" content="2016-03-23T05:14:34.909Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript的RegExp类型">
 <meta name="twitter:description" content="ECMAScript 通过 RegExp 类型来支持正则表达式。使用下面类似 Perl 的语法，就可以创建一个正则表达式。var expression = / pattern / flags ;
@@ -226,15 +226,15 @@
       
 
       
-        <span itemprop="articleBody"><p><code>ECMAScript</code> 通过 <code>RegExp</code> 类型来支持正则表达式。使用下面类似 <code>Perl</code> 的语法，就可以创建一个正则表达式。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> expression = <span class="regexp">/ pattern /</span> flags ;</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><p><code>ECMAScript</code> 通过 <code>RegExp</code> 类型来支持正则表达式。使用下面类似 <code>Perl</code> 的语法，就可以创建一个正则表达式。<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> expression = <span class="regexp">/ pattern /</span> flags ;</div></pre></td></tr></table></figure></p>
 <p>其中的模式<code>pattern</code>部分可以是任何简单或复杂的正则表达式，可以包含字符类、限定符、分组、向前查找以及反向引用。每个正则表达式都可带有一或多个标志<code>flags</code>，用以标明正则表达式的行为。正则表达式的匹配模式支持下列 3 个标志。</p>
 <ul>
 <li><code>g</code>表示全局<code>global</code>模式，即模式将被应用于所有字符串，而非在发现第一个匹配项时立即停止；</li>
 <li><code>i</code>表示不区分大小写<code>case-insensitive</code>模式，即在确定匹配项时忽略模式与字符串的大小写；</li>
 <li><code>m</code>表示多行<code>multiline</code>模式，即在到达一行文本末尾时还会继续查找下一行中是否存在与模式匹配的项。</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配字符串中所有"at"的实例</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern1 = <span class="regexp">/at/g</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配第一个"bat"或"cat"，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern2 = <span class="regexp">/[bc]at/i</span>;</span><br><span class="line"><span class="comment">/*</span><br><span class="line">* 匹配所有以"at"结尾的 3 个字符的组合，不区分大小写</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">var</span> pattern3 = <span class="regexp">/.at/gi</span>;</span><br></pre></td></tr></table></figure>
-<p>与其他语言中的正则表达式类似，模式中使用的所有元字符都必须转义。正则表达式中的元字符包括：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">( [ &#123; \ ^ $ | ) ? * + .]&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">* 匹配字符串中所有"at"的实例</div><div class="line">*/</div><div class="line"><span class="keyword">var</span> pattern1 = <span class="regexp">/at/g</span>;</div><div class="line"><span class="comment">/*</span></div><div class="line">* 匹配第一个"bat"或"cat"，不区分大小写</div><div class="line">*/</div><div class="line"><span class="keyword">var</span> pattern2 = <span class="regexp">/[bc]at/i</span>;</div><div class="line"><span class="comment">/*</span></div><div class="line">* 匹配所有以"at"结尾的 3 个字符的组合，不区分大小写</div><div class="line">*/</div><div class="line"><span class="keyword">var</span> pattern3 = <span class="regexp">/.at/gi</span>;</div></pre></td></tr></table></figure>
+<p>与其他语言中的正则表达式类似，模式中使用的所有元字符都必须转义。正则表达式中的元字符包括：<br><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">( [ &#123; \ ^ $ | ) ? * + .]&#125;</div></pre></td></tr></table></figure></p>
 <h6 id="RegExp实例属性"><a href="#RegExp实例属性" class="headerlink" title="RegExp实例属性"></a>RegExp实例属性</h6><p>RegExp 的每个实例都具有下列属性，通过这些属性可以取得有关模式的各种信息。</p>
 <ul>
 <li><code>global</code>布尔值，表示是否设置了 <code>g</code> 标志。</li>
@@ -336,7 +336,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

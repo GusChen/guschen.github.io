@@ -59,7 +59,7 @@ new Array()
 
 参数也可以说length，生成的长度为length的数组，内容为undefined
   new Array(3); // [undefined*3]">
-<meta property="og:updated_time" content="2016-03-23T05:11:59.635Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之Array对象">
 <meta name="twitter:description" content="Array的构造器
@@ -252,10 +252,10 @@ new Array()
 </blockquote>
 <ul>
 <li><p>可以是多个参数</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>参数也可以说length，生成的长度为length的数组，内容为undefined</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>); <span class="comment">// [undefined*3]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>); <span class="comment">// [undefined*3]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
@@ -277,7 +277,7 @@ new Array()
 <ul>
 <li>用来判断某个值是否为数组。</li>
 <li><p>返回值是<code>true</code>和<code>false</code></p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.isArray([]); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="number">123</span>); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 鲜为人知的事实：其实 Array.prototype 也是一个数组。</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.prototype);</span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.isArray([]); <span class="comment">// true</span></div><div class="line"><span class="built_in">Array</span>.isArray(<span class="number">123</span>); <span class="comment">// false</span></div><div class="line"><span class="comment">// 鲜为人知的事实：其实 Array.prototype 也是一个数组。</span></div><div class="line"><span class="built_in">Array</span>.isArray(<span class="built_in">Array</span>.prototype);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Array的原型对象方法"><a href="#Array的原型对象方法" class="headerlink" title="Array的原型对象方法"></a>Array的原型对象方法</h4><blockquote>
@@ -291,7 +291,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>返回一个字符串，表示指定的数组及其元素。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.toString(); <span class="comment">// "1,2,3"</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.toString(); <span class="comment">// "1,2,3"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -299,7 +299,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>返回一个字符串表示数组中的元素。数组中的元素将使用各自的 toLocaleString 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 “,”）隔开。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> arr = [num, date, <span class="string">'str'</span>];</span><br><span class="line">arr.toLocaleString(); <span class="comment">// "1,2016/3/3 上午11:45:30,str"</span></span><br><span class="line"><span class="comment">//Date对象的具体效果以浏览器为准这里是chrome的例子</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> arr = [num, date, <span class="string">'str'</span>];</div><div class="line">arr.toLocaleString(); <span class="comment">// "1,2016/3/3 上午11:45:30,str"</span></div><div class="line"><span class="comment">//Date对象的具体效果以浏览器为准这里是chrome的例子</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -307,7 +307,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>将传入的数组或非数组值与原数组合并,组成一个新的数组并返回。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//连接2个数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">arr1.concat(arr2); <span class="comment">// [1, 2, 3, 'a', 'b', 'c']</span></span><br><span class="line"><span class="comment">//连接3个数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line"><span class="keyword">var</span> arr3 = [<span class="string">'arr'</span>]</span><br><span class="line">arr1.concat(arr2, arr3); <span class="comment">// [1, 2, 3, 'a', 'b', 'c', 'arr']</span></span><br><span class="line"><span class="comment">//连接非组值</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'str'</span>;</span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr1.concat(str); <span class="comment">// [1, 2, 3, 'str']</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">//连接2个数组</span></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</div><div class="line">arr1.concat(arr2); <span class="comment">// [1, 2, 3, 'a', 'b', 'c']</span></div><div class="line"><span class="comment">//连接3个数组</span></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</div><div class="line"><span class="keyword">var</span> arr3 = [<span class="string">'arr'</span>]</div><div class="line">arr1.concat(arr2, arr3); <span class="comment">// [1, 2, 3, 'a', 'b', 'c', 'arr']</span></div><div class="line"><span class="comment">//连接非组值</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'str'</span>;</div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr1.concat(str); <span class="comment">// [1, 2, 3, 'str']</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -315,7 +315,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>将数组中的所有元素连接成一个字符串。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.json(<span class="string">','</span>); <span class="comment">// "1,2,3"</span></span><br><span class="line">arr.json(<span class="string">'-'</span>); <span class="comment">// "1-2-3"</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.json(<span class="string">','</span>); <span class="comment">// "1,2,3"</span></div><div class="line">arr.json(<span class="string">'-'</span>); <span class="comment">// "1-2-3"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -323,7 +323,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>方法删除一个数组中的最后的一个元素，并且返回这个元素。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.pop(); <span class="comment">// 3 </span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.pop(); <span class="comment">// 3 </span></div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -331,7 +331,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.push(<span class="number">4</span>); <span class="comment">// 4</span></span><br><span class="line">arr.push(<span class="number">5</span>, <span class="number">6</span>); <span class="comment">// 6</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.push(<span class="number">4</span>); <span class="comment">// 4</span></div><div class="line">arr.push(<span class="number">5</span>, <span class="number">6</span>); <span class="comment">// 6</span></div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2, 3, 4, 5, 6]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -339,7 +339,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>颠倒数组中元素的位置。第一个元素会成为最后一个，最后一个会成为第一个。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.reverse(); <span class="comment">// [3, 2, 1]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.reverse(); <span class="comment">// [3, 2, 1]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -347,7 +347,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>方法删除数组的 第一个 元素，并返回这个元素。该方法会改变数组的长度。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.shift(); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [2, 3]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.shift(); <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [2, 3]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -355,7 +355,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>在数组的开头添加一个或者多个元素，并返回数组新的 length 值。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.unshift(<span class="string">'a'</span>, <span class="string">'r'</span>); <span class="comment">// 5</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['a', 'r', 1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.unshift(<span class="string">'a'</span>, <span class="string">'r'</span>); <span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['a', 'r', 1, 2, 3]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -376,12 +376,12 @@ new Array()
 <li>slice(1,4) 提取原数组中的第二个元素开始直到第四个元素的所有元素 （索引为 1, 2, 3的元素）。</li>
 <li>如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 slice(-2,-1)表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。</li>
 <li><p>如果 end 被省略，则slice 会一直提取到原数组末尾。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Lemon"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</span><br><span class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// ["Orange", "Lemon"]</span></span><br><span class="line"><span class="keyword">var</span> citrus2 = fruits.slice(<span class="number">-2</span>,<span class="number">-1</span>);<span class="comment">// ["Apple"]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Lemon"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</div><div class="line"><span class="keyword">var</span> citrus = fruits.slice(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// ["Orange", "Lemon"]</span></div><div class="line"><span class="keyword">var</span> citrus2 = fruits.slice(<span class="number">-2</span>,<span class="number">-1</span>);<span class="comment">// ["Apple"]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>转换类数组对象（Array-like）</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">list</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> list1 = list(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">list</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> list1 = list(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -393,7 +393,7 @@ new Array()
 <li>start删除的起始位置</li>
 <li>deleteCount删除个数</li>
 <li><p>item插入元素</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">arr.splice(<span class="number">0</span>, <span class="number">2</span>, <span class="string">'num'</span>); <span class="comment">// [1, 2]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['num', 3, 4]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</div><div class="line">arr.splice(<span class="number">0</span>, <span class="number">2</span>, <span class="string">'num'</span>); <span class="comment">// [1, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['num', 3, 4]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -405,10 +405,10 @@ new Array()
 <li><p>对数组的元素做原地的排序，并返回这个数组。 sort 可能不是稳定的。默认按照字符串的Unicode码位点（code point）排序。</p>
 <ul>
 <li><p>基础用法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>];</span><br><span class="line">arr.sort();</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>];</div><div class="line">arr.sort();</div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>sort可以接受一个函数作为参数</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>];</span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b - a;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [3, 2, 1]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>];</div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> b - a;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [3, 2, 1]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -418,7 +418,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>返回给定元素能找在数组中找到的第一个索引值，否则返回-1。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.indexOf(<span class="number">1</span>); <span class="comment">// 0</span></span><br><span class="line">arr.indexOf(<span class="number">4</span>); <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.indexOf(<span class="number">1</span>); <span class="comment">// 0</span></div><div class="line">arr.indexOf(<span class="number">4</span>); <span class="comment">// -1</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -426,7 +426,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.lastIndexOf(<span class="number">2</span>); <span class="comment">// 2</span></span><br><span class="line">arr.lastIndexOf(<span class="number">4</span>); <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">arr.lastIndexOf(<span class="number">2</span>); <span class="comment">// 2</span></div><div class="line">arr.lastIndexOf(<span class="number">4</span>); <span class="comment">// -1</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -434,7 +434,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item &gt;= <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// [3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</div><div class="line"><span class="keyword">var</span> arr2 = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> item &gt;= <span class="number">3</span>;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// [3, 4, 5, 6]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -442,7 +442,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>让数组的每一项都执行一次给定的函数。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">    arr1[index] = item * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// [2, 4, 6]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr1 = [];</div><div class="line"><span class="keyword">var</span> arr2 = arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">    arr1[index] = item * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// [2, 4, 6]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -451,7 +451,7 @@ new Array()
 <ul>
 <li>测试数组中的某些元素是否通过了指定函数的测试。</li>
 <li><p>测试数组中的每一项，如果返回值中有一个true则返回true如果没有返回false。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//测试是否有项目等于1 </span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item == <span class="number">1</span>);</span><br><span class="line">&#125;)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">//测试是否有项目等于1 </span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (item == <span class="number">1</span>);</div><div class="line">&#125;)); <span class="comment">// true</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -460,7 +460,7 @@ new Array()
 <ul>
 <li>测试数组的所有元素是否都通过了指定函数的测试。</li>
 <li><p>测试数组中的每一项，如果返回值中全部为true则返回true否则返回false。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item == <span class="number">1</span>);</span><br><span class="line">&#125;)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> (item == <span class="number">1</span>);</div><div class="line">&#125;)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -468,7 +468,7 @@ new Array()
 </blockquote>
 <ul>
 <li><p>返回一个由原数组中的每个元素调用一个指定方法后的返回值组成的新数组。</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// [2, 4, 6]</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> arr2 = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> item * <span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// [2, 4, 6]</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -576,7 +576,7 @@ new Array()
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

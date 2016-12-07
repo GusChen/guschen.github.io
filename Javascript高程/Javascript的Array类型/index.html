@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://www.mycgx.com/Javascript高程/Javascript的Array类型/index.html">
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="除了 Object 之外， Array 类型恐怕是 ECMAScript 中最常用的类型了。而且， ECMAScript中的数组与其他多数语言中的数组有着相当大的区别。虽然 ECMAScript 数组与其他语言中的数组都是数据的有序列表，但与其他语言不同的是， ECMAScript 数组的每一项可以保存任何类型的数据。">
-<meta property="og:updated_time" content="2016-03-23T05:14:34.819Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript的Array类型">
 <meta name="twitter:description" content="除了 Object 之外， Array 类型恐怕是 ECMAScript 中最常用的类型了。而且， ECMAScript中的数组与其他多数语言中的数组有着相当大的区别。虽然 ECMAScript 数组与其他语言中的数组都是数据的有序列表，但与其他语言不同的是， ECMAScript 数组的每一项可以保存任何类型的数据。">
@@ -227,53 +227,53 @@
 <a id="more"></a>
 <h5 id="创建数组的基本方式有两种。"><a href="#创建数组的基本方式有两种。" class="headerlink" title="创建数组的基本方式有两种。"></a>创建数组的基本方式有两种。</h5><ul>
 <li><p>第一种是使用 <code>Array</code> 构造函数。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">20</span>); <span class="comment">// 创建一个length为20的数组</span></span><br><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>); <span class="comment">// 创建一个包含3个字符串的数组</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">20</span>); <span class="comment">// 创建一个length为20的数组</span></div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>); <span class="comment">// 创建一个包含3个字符串的数组</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>创建数组的第二种基本方式是使用数组字面量表示法。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [];</span><br><span class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];</div><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>];</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h5 id="在Array中的length"><a href="#在Array中的length" class="headerlink" title="在Array中的length"></a>在Array中的length</h5><ul>
-<li>在<code>Array</code>中可以通过修改length的值修改<code>Array</code>的长度，例如<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">'green'</span>, <span class="string">'blue'</span>];</span><br><span class="line"><span class="keyword">var</span> arr.length = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['green'];</span></span><br><span class="line"><span class="keyword">var</span> arr[<span class="number">99</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 100;</span></span><br></pre></td></tr></table></figure>
+<li>在<code>Array</code>中可以通过修改length的值修改<code>Array</code>的长度，例如<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'green'</span>, <span class="string">'blue'</span>];</div><div class="line"><span class="keyword">var</span> arr.length = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ['green'];</span></div><div class="line"><span class="keyword">var</span> arr[<span class="number">99</span>] = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">// 100;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h5 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h5><ul>
 <li>检测数组<ul>
-<li>使用<code>instanceof</code>操作符<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line"><span class="comment">//对数组执行某些操作</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<li>使用<code>instanceof</code>操作符<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"> <span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</div><div class="line"><span class="comment">//对数组执行某些操作</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
 <li><p><code>Array.isArray()</code>方法,支持 <code>Array.isArray()</code>方法的浏览器有 <code>IE9+</code>、 <code>Firefox 4+</code>、 <code>Safari 5+</code>、 <code>Opera 10.5+</code>和 <code>Chrome</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(value))&#123;</span><br><span class="line"><span class="comment">//对数组执行某些操作</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"> <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(value))&#123;</div><div class="line"><span class="comment">//对数组执行某些操作</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>转换方法</li>
 </ul>
 </li>
 <li><p>所有对象都具有 <code>toLocaleString()</code>、 <code>toString()</code>和 <code>valueOf()</code>方法。其中，调用数组的 <code>toString()</code>方法会返回由数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串。而调用 <code>valueOf()</code>返回的还是数组。实际上，为了创建这个字符串会调用数组每一项的 <code>toString()</code>方法。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">'aa'</span>,<span class="string">'bb'</span>];</span><br><span class="line">arr.toLocaleString(); <span class="comment">// aa,bb 过时函数不推荐使用 </span></span><br><span class="line">arr.toString(); <span class="comment">// aa,bb 效果和toLocaleString();一致</span></span><br><span class="line">arr.valueOf(); <span class="comment">// ['aa','bb'] 返回是一个数组对象和直接打印一致</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'aa'</span>,<span class="string">'bb'</span>];</div><div class="line">arr.toLocaleString(); <span class="comment">// aa,bb 过时函数不推荐使用 </span></div><div class="line">arr.toString(); <span class="comment">// aa,bb 效果和toLocaleString();一致</span></div><div class="line">arr.valueOf(); <span class="comment">// ['aa','bb'] 返回是一个数组对象和直接打印一致</span></div></pre></td></tr></table></figure>
 <ul>
 <li>栈方法</li>
 </ul>
 </li>
 <li><p><code>ECMAScript</code> 为数组专门提供了 <code>push()</code>和 <code>pop()</code>方法，以便实现类似栈的行为。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">'aa'</span>,<span class="string">'bb'</span>];</span><br><span class="line">arr.push(<span class="string">'cc'</span>); <span class="comment">// 3 push方法将cc压入数组中，返回值是数组的length</span></span><br><span class="line">arr.pop(); <span class="comment">// cc 将最后一个键值弹出数组 返回值是弹出的值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">'aa'</span>,<span class="string">'bb'</span>];</div><div class="line">arr.push(<span class="string">'cc'</span>); <span class="comment">// 3 push方法将cc压入数组中，返回值是数组的length</span></div><div class="line">arr.pop(); <span class="comment">// cc 将最后一个键值弹出数组 返回值是弹出的值</span></div></pre></td></tr></table></figure>
 <ul>
 <li>队列方法</li>
 </ul>
 </li>
 <li><p>栈数据结构的访问规则是 <code>LIFO</code> （后进先出），而队列数据结构的访问规则是 <code>FIFO</code> （First-In-First-Out，先进先出）。队列在列表的末端添加项，从列表的前端移除项。由于 <code>push()</code>是向数组末端添加项的方法，因此要模拟队列只需一个从数组前端取得项的方法。实现这一操作的数组方法就是 <code>shift()</code>，它能够移除数组中的第一个项并返回该项，同时将数组长度减 1。结合使用 <code>shift()</code>和 <code>push()</code>方法，可以像使用队列一样使用数组。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">//推入两项</span></span><br><span class="line">alert(count); <span class="comment">//2</span></span><br><span class="line">count = colors.push(<span class="string">"black"</span>); <span class="comment">//推入另一项</span></span><br><span class="line">alert(count); <span class="comment">//3</span></span><br><span class="line"><span class="keyword">var</span> item = colors.shift(); <span class="comment">//取得第一项</span></span><br><span class="line">alert(item); <span class="comment">//"red"</span></span><br><span class="line">alert(colors.length); <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"> <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//创建一个数组</span></div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">//推入两项</span></div><div class="line">alert(count); <span class="comment">//2</span></div><div class="line">count = colors.push(<span class="string">"black"</span>); <span class="comment">//推入另一项</span></div><div class="line">alert(count); <span class="comment">//3</span></div><div class="line"><span class="keyword">var</span> item = colors.shift(); <span class="comment">//取得第一项</span></div><div class="line">alert(item); <span class="comment">//"red"</span></div><div class="line">alert(colors.length); <span class="comment">//2</span></div></pre></td></tr></table></figure>
 </li>
 <li><p><code>ECMAScript</code> 还为数组提供了一个 <code>unshift()</code>方法。顾名思义，<code>unshift()</code>与 <code>shift()</code>的用途相反：它能在数组前端添加任意个项并返回新数组的长度。因此，同时使用 <code>unshift()</code>和 <code>pop()</code>方法，可以从相反的方向来模拟队列，即在数组的前端添加项，从数组末端移除项。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> count = colors.unshift(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">//推入两项</span></span><br><span class="line">alert(count); <span class="comment">//2</span></span><br><span class="line">count = colors.unshift(<span class="string">"black"</span>); <span class="comment">//推入另一项</span></span><br><span class="line">alert(count); <span class="comment">//3</span></span><br><span class="line"><span class="keyword">var</span> item = colors.pop(); <span class="comment">//取得最后一项</span></span><br><span class="line">alert(item); <span class="comment">//"green"</span></span><br><span class="line">alert(colors.length); <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"> <span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//创建一个数组</span></div><div class="line"><span class="keyword">var</span> count = colors.unshift(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">//推入两项</span></div><div class="line">alert(count); <span class="comment">//2</span></div><div class="line">count = colors.unshift(<span class="string">"black"</span>); <span class="comment">//推入另一项</span></div><div class="line">alert(count); <span class="comment">//3</span></div><div class="line"><span class="keyword">var</span> item = colors.pop(); <span class="comment">//取得最后一项</span></div><div class="line">alert(item); <span class="comment">//"green"</span></div><div class="line">alert(colors.length); <span class="comment">//2</span></div></pre></td></tr></table></figure>
 <ul>
 <li>重排序方法</li>
 </ul>
 </li>
 <li><p>数组中已经存在两个可以直接用来重排序的方法： <code>reverse()</code>和 <code>sort()</code>。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line">arr.reverse(); <span class="comment">// [4,3,2,1]; 逆向排序 如果是英文的话按字母逆向</span></span><br><span class="line">arr.sort(); <span class="comment">// [1,2,3,4]  正向排序</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>];</div><div class="line">arr.reverse(); <span class="comment">// [4,3,2,1]; 逆向排序 如果是英文的话按字母逆向</span></div><div class="line">arr.sort(); <span class="comment">// [1,2,3,4]  正向排序</span></div></pre></td></tr></table></figure>
 <ul>
 <li>操作方法</li>
 </ul>
@@ -396,7 +396,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

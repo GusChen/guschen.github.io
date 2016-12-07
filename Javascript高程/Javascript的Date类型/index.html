@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://www.mycgx.com/Javascript高程/Javascript的Date类型/index.html">
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="ECMAScript 中的 Date 类型是在早期 Java 中的 java.util.Date 类基础上构建的。为此， Date类型使用自 UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。">
-<meta property="og:updated_time" content="2016-03-23T05:14:34.849Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript的Date类型">
 <meta name="twitter:description" content="ECMAScript 中的 Date 类型是在早期 Java 中的 java.util.Date 类基础上构建的。为此， Date类型使用自 UTC（Coordinated Universal Time，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。">
@@ -226,7 +226,7 @@
         <span itemprop="articleBody"><p><code>ECMAScript</code> 中的 <code>Date</code> 类型是在早期 <code>Java</code> 中的 <code>java.util.Date</code> 类基础上构建的。为此， <code>Date</code>类型使用自 <code>UTC</code>（<code>Coordinated Universal Time</code>，国际协调时间）1970年1月1日午夜（零时）开始经过的毫秒数来保存日期。在使用这种数据存储格式的条件下， Date 类型保存的日期能够精确到1970年1月1日之前或之后的 285616 年。</p>
 <a id="more"></a>
 <p>在调用 <code>Date</code> 构造函数而不传递参数的情况下，新创建的对象自动获得当前日期和时间。如果想根<br>据特定的日期和时间创建日期对象，必须传入表示该日期的毫秒数（即从 <code>UTC</code> 时间 1970 年 1 月 1 日午<br>夜起至该日期止经过的毫秒数）。为了简化这一计算过程， <code>ECMAScript</code> 提供了两个方法： <code>Date.parse()</code><br>和 <code>Date.UTC()</code>。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(<span class="string">"May 25, 2004"</span>));</span><br><span class="line"><span class="comment">// GMT 时间 2000 年 1 月 1 日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</span><br><span class="line"><span class="comment">// GMT 时间 2005 年 5 月 5 日下午 5:55:55</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> someDate = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(<span class="string">"May 25, 2004"</span>));</div><div class="line"><span class="comment">// GMT 时间 2000 年 1 月 1 日午夜零时</span></div><div class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</div><div class="line"><span class="comment">// GMT 时间 2005 年 5 月 5 日下午 5:55:55</span></div><div class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</div></pre></td></tr></table></figure>
 <p><code>ECMAScript 5</code> 添加了 <code>Data.now()</code>方法，返回表示调用这个方法时的日期和时间的毫秒数。支持 <code>Data.now()</code>方法的浏览器包括 <code>IE9+</code>、 <code>Firefox 3+</code>、 <code>Safari 3+</code>、 <code>Opera 10.5</code> 和 <code>Chrome</code>。在不支持它的浏览器中，使用<code>+</code>操作符把 <code>Data</code> 对象转换成字符串，也可以达到同样的目的。</p>
 <h6 id="继承的方法"><a href="#继承的方法" class="headerlink" title="继承的方法"></a>继承的方法</h6><p>与其他引用类型一样， <code>Date</code> 类型也重写了 <code>toLocaleString()</code>、<code>toString()</code>和 <code>valueOf()</code>方法；但这些方法返回的值与其他类型中的方法不同。 <code>Date</code> 类型的 <code>toLocaleString()</code>方法会按照与浏览器设置的地区相适应的格式返回日期和时间。</p>
 <h6 id="日期格式化方法"><a href="#日期格式化方法" class="headerlink" title="日期格式化方法"></a>日期格式化方法</h6><p><code>Date</code> 类型还有一些专门用于将日期格式化为字符串的方法，这些方法如下。</p>
@@ -469,7 +469,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

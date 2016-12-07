@@ -47,7 +47,7 @@
 <meta property="og:description" content="ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。
 
 定义变量时要使用var操作符（注意var是一个关键字），后跟变量名（即一个标识符）;">
-<meta property="og:updated_time" content="2016-03-23T05:14:34.639Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript的变量">
 <meta name="twitter:description" content="ECMAScript 的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。换句话说，每个变量仅仅是一个用于保存值的占位符而已。
@@ -236,11 +236,11 @@
 </li>
 </ul>
 <a id="more"></a>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> message</span> = <span class="string">"hi"</span>;</span><br><span class="line">message = <span class="number">100</span>; <span class="comment">// 有效，但不推荐</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><div class="line">var message = <span class="string">"hi"</span><span class="comment">;</span></div><div class="line"><span class="attribute">message</span> = <span class="number">100</span><span class="comment">; // 有效，但不推荐</span></div></pre></td></tr></table></figure>
 <ul>
 <li><code>var</code>操作符定义的变量将成为定义该变量的作用域中的局部变量。也就是说，如果在函数中使用<code>var</code>定义一个变量，那么这个变量在函数退出后就会被销毁。（外部定义的变量是全局变量，函数内部定义的变量是局部变量，如果在函数中定义函数不适用<code>var</code>将被解析为全局变量。）</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> message = <span class="string">"hi"</span>; <span class="comment">// 局部变量</span></span><br><span class="line">  demo = <span class="number">1</span>;<span class="comment">//全局变量</span></span><br><span class="line">  &#125;</span><br><span class="line">test();</span><br><span class="line">alert(message); <span class="comment">// 错误！</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> message = <span class="string">"hi"</span>; <span class="comment">// 局部变量</span></div><div class="line">  demo = <span class="number">1</span>;<span class="comment">//全局变量</span></div><div class="line">  &#125;</div><div class="line">test();</div><div class="line">alert(message); <span class="comment">// 错误！</span></div></pre></td></tr></table></figure>
 <ul>
 <li>在严格模式下，不能定义名为<code>eval</code>或<code>arguments</code>的变量，否则会导致语法错误。</li>
 </ul>
@@ -334,7 +334,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://www.mycgx.com/随笔记录/兼容class的选择器/index.html">
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
-<meta property="og:updated_time" content="2016-03-23T05:11:11.582Z">
+<meta property="og:updated_time" content="2016-12-06T11:57:59.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="兼容class的选择器">
 <meta name="twitter:description" content="在现在浏览器中，大多数浏览器已经拥有getElementsByClassName这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容">
@@ -223,7 +223,7 @@
       
 
       
-        <span itemprop="articleBody"><p>在现在浏览器中，大多数浏览器已经拥有<code>getElementsByClassName</code>这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//兼容新老浏览器的class</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">node, classname</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (node.getElementsByClassName) &#123;</span><br><span class="line">        <span class="comment">//使用现有方法</span></span><br><span class="line">        <span class="keyword">return</span> node.getElementsByClassName(classname);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> results = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">        <span class="keyword">var</span> elems = node.getElementsByTagName(<span class="string">'*'</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (elems[i].className.indexOf(classname) != <span class="number">-1</span>) &#123;</span><br><span class="line">            results[results.length] = elems[i];</span><br><span class="line">          &#125;</span><br><span class="line">        <span class="keyword">return</span> results;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><p>在现在浏览器中，大多数浏览器已经拥有<code>getElementsByClassName</code>这个方法，但是在ie浏览器中只有ie9及以上才拥有这个方法，可以使用下的方式进行兼容<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">//兼容新老浏览器的class</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">node, classname</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (node.getElementsByClassName) &#123;</div><div class="line">        <span class="comment">//使用现有方法</span></div><div class="line">        <span class="keyword">return</span> node.getElementsByClassName(classname);</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">var</span> results = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">        <span class="keyword">var</span> elems = node.getElementsByTagName(<span class="string">'*'</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elems.length; i++) &#123;</div><div class="line">          <span class="keyword">if</span> (elems[i].className.indexOf(classname) != <span class="number">-1</span>) &#123;</div><div class="line">            results[results.length] = elems[i];</div><div class="line">          &#125;</div><div class="line">        <span class="keyword">return</span> results;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -314,7 +314,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
