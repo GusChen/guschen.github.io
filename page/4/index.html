@@ -178,6 +178,92 @@
           
           
             
+              <a class="post-title-link" href="/Javascript高程/Javascript的Objcet类型/" itemprop="url">
+                Javascript的Objcet类型
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-11T22:14:00+08:00" content="2015-11-11">
+            2015-11-11
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/JavaScript高程/" itemprop="url" rel="index"><span itemprop="name">JavaScript高程</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/Javascript高程/Javascript的Objcet类型/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="Javascript高程/Javascript的Objcet类型/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <ul>
+<li>到目前为止，我们看到的大多数引用类型值都是 <code>Object</code> 类型的实例；而且， <code>Object</code> 也是<code>ECMAScript</code> 中使用最多的一个类型。虽然 <code>Object</code> 的实例不具备多少功能，但对于在应用程序中存储和传输数据而言，它们确实是非常理想的选择。</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Javascript高程/Javascript的Objcet类型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/随笔记录/npm常用命令/" itemprop="url">
                 npm常用命令
               </a>
@@ -526,99 +612,6 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/Javascript高程/Javascript的函数/" itemprop="url">
-                Javascript的函数
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-04T22:40:03+08:00" content="2015-11-04">
-            2015-11-04
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/JavaScript高程/" itemprop="url" rel="index"><span itemprop="name">JavaScript高程</span></a></span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/Javascript高程/Javascript的函数/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="Javascript高程/Javascript的函数/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 ECMAScript 中的函数使用 function 关键字来声明，后跟一组参数以及函数体。函数的基本语法如下所示：<br><figure class="highlight actionscript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span><span class="params">(arg0, arg1,<span class="rest_arg">...,argN</span>)</span> </span>&#123;</div><div class="line">  statements</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>函数在碰到<code>return</code>的任何代码都永远不会执行。</li>
-<li><code>return</code> 后面可以带参数，也可以不带参。</li>
-</ul>
-<h6 id="参数问题"><a href="#参数问题" class="headerlink" title="参数问题"></a>参数问题</h6><ul>
-<li><code>ECMAScript</code> 函数的参数与大多数其他语言中函数的参数有所不同。 <code>ECMAScript</code> 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。</li>
-<li><code>arguments</code> 对象只是与数组类似（它并不是 <code>Array</code> 的实例），因为可以使用方括号语法访问它的每一个元素（即第一个元素是 <code>arguments[0]</code>，第二个元素是 <code>argumetns[1]</code>，以此类推），使用 <code>length</code> 属性来确定传递进来多少个参数。</li>
-<li>在函数体内可以通过 <code>arguments</code> 对象来访问这个参数数组，从而获取传递给函数的每一个参数。</li>
-<li>通过访问 <code>arguments</code> 对象的 <code>length</code> 属性可以获知有多少个参数传递给了函数</li>
-</ul>
-<h6 id="没有重载"><a href="#没有重载" class="headerlink" title="没有重载"></a>没有重载</h6><ul>
-<li><code>ECMAScript</code> 函数不能像传统意义上那样实现重载。而在其他语言（如 <code>Java</code>）中，可以为一个函数编写两个定义，只要这两个定义的签名（接受的参数的类型和数量）不同即可。如前所述， <code>ECMAScirpt</code>函数没有签名，因为其参数是由包含零或多个值的数组来表示的。而没有函数签名，真正的重载是不可能做到的。</li>
-</ul>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -658,21 +651,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
