@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="npm," />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -37,22 +37,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/13878532?v=3&amp;s=40?v=0.4.4" />
 
 
-<meta name="description" content="npm install &amp;lt;name&amp;gt;安装nodejs的依赖包
-
-例如npm install express 就会默认安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6">
+<meta name="description" content="JavaScript是一门基于原型的语言，所有的类型都有其原型，在这里我们需要了解prototype和__proto__，很多人都分辨不清楚，这两货到底有什么区别。
+可以这么说吧，__proto__就是指向当前对象的原型，也只是一部分浏览器实现了这个属性在规范中对应是[[Prototype]]，而prototype是构造函数特有的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm常用命令">
-<meta property="og:url" content="http://www.mycgx.com/随笔记录/npm常用命令/index.html">
+<meta property="og:title" content="用JavaScript实现继承">
+<meta property="og:url" content="http://www.mycgx.com/原生JavaScript/用JavaScript实现继承/index.html">
 <meta property="og:site_name" content="小鱼Gus">
-<meta property="og:description" content="npm install &amp;lt;name&amp;gt;安装nodejs的依赖包
-
-例如npm install express 就会默认安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6">
-<meta property="og:updated_time" content="2016-12-06T11:57:59.188Z">
+<meta property="og:description" content="JavaScript是一门基于原型的语言，所有的类型都有其原型，在这里我们需要了解prototype和__proto__，很多人都分辨不清楚，这两货到底有什么区别。
+可以这么说吧，__proto__就是指向当前对象的原型，也只是一部分浏览器实现了这个属性在规范中对应是[[Prototype]]，而prototype是构造函数特有的。">
+<meta property="og:updated_time" content="2016-12-20T11:14:15.707Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm常用命令">
-<meta name="twitter:description" content="npm install &amp;lt;name&amp;gt;安装nodejs的依赖包
-
-例如npm install express 就会默认安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6">
+<meta name="twitter:title" content="用JavaScript实现继承">
+<meta name="twitter:description" content="JavaScript是一门基于原型的语言，所有的类型都有其原型，在这里我们需要了解prototype和__proto__，很多人都分辨不清楚，这两货到底有什么区别。
+可以这么说吧，__proto__就是指向当前对象的原型，也只是一部分浏览器实现了这个属性在规范中对应是[[Prototype]]，而prototype是构造函数特有的。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -62,7 +59,7 @@
   };
 </script>
 
-    <title> npm常用命令 // 小鱼Gus </title>
+    <title> 用JavaScript实现继承 // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -183,7 +180,7 @@
           
           
             
-              npm常用命令
+              用JavaScript实现继承
             
           
         </h1>
@@ -192,8 +189,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-11T18:00:00+08:00" content="2015-11-11">
-            2015-11-11
+          <time itemprop="dateCreated" datetime="2016-12-19T22:14:00+08:00" content="2016-12-19">
+            2016-12-19
           </time>
         </span>
 
@@ -201,7 +198,7 @@
           <span class="post-category" >
             &nbsp; | &nbsp; 分类于
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/随笔记录/" itemprop="url" rel="index"><span itemprop="name">随笔记录</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/原生JavaScript/" itemprop="url" rel="index"><span itemprop="name">原生JavaScript</span></a></span>
 
               
               
@@ -214,8 +211,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/随笔记录/npm常用命令/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="随笔记录/npm常用命令/" itemprop="commentsCount"></span>
+              <a href="/原生JavaScript/用JavaScript实现继承/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="原生JavaScript/用JavaScript实现继承/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -229,29 +226,15 @@
       
 
       
-        <span itemprop="articleBody"><p><code>npm install &lt;name&gt;</code>安装<code>nodejs</code>的依赖包</p>
-<ul>
-<li>例如<code>npm install express</code> 就会默认安装<code>express</code>的最新版本，也可以通过在后面加版本号的方式安装指定版本，如<code>npm install express@3.0.6</code></li>
-</ul>
+        <span itemprop="articleBody"><p><code>JavaScript</code>是一门基于原型的语言，所有的类型都有其原型，在这里我们需要了解<code>prototype</code>和<code>__proto__</code>，很多人都分辨不清楚，这两货到底有什么区别。</p>
+<p>可以这么说吧，<code>__proto__</code>就是指向当前对象的原型，也只是一部分浏览器实现了这个属性在规范中对应是<code>[[Prototype]]</code>，<br>而<code>prototype</code>是构造函数特有的。</p>
 <a id="more"></a>
-<p><code>npm install &lt;name&gt; -g</code>  将包安装到全局环境中</p>
-<ul>
-<li>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令</li>
-</ul>
-<p><code>npm install &lt;name&gt; --save</code>  安装的同时，将信息写入<code>package.json</code>中</p>
-<ul>
-<li><p>项目路径中如果有<code>package.json</code>文件时，直接使用<code>npm install</code>方法就可以根据<code>dependencies</code>配置安装所有的依赖包</p>
-</li>
-<li><p>这样代码提交到github时，就不用提交node_modules这个文件夹了。</p>
-</li>
-</ul>
-<p><code>npm init</code>  会引导你创建<code>一个package.json</code>文件，包括名称、版本、作者这些信息等</p>
-<p><code>npm remove &lt;name&gt;</code>移除</p>
-<p><code>npm update &lt;name&gt;</code>更新</p>
-<p><code>npm ls</code> 列出当前安装的了所有包</p>
-<p><code>npm root</code> 查看当前包的安装路径</p>
-<p><code>npm root -g</code>  查看全局的包的安装路径</p>
-<p><code>npm help</code>  帮助，如果要单独查看<code>install</code>命令的帮助，可以使用的<code>npm help install</code></p>
+<p>这里又涉及到了另外一个知识点原型链，因为每一个对象都有自己的<code>__proto__</code>，这样就导致了原型的层层嵌套了，我们层层往下找会发现最底层已经是<code>null</code>了</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Object</span>.__proro__ <span class="comment">// function()&#123;&#125;</span></div><div class="line"><span class="built_in">Object</span> <span class="comment">// function()&#123;[native code]&#125;</span></div><div class="line"><span class="built_in">Object</span>.prototype.__proto__ <span class="comment">// null</span></div></pre></td></tr></table></figure>
+<p>在54版本的<code>chrome</code>浏览器中，执行上面的代码发现<code>Object.__protot__</code>，发现已经变成了一个函数，仔细查看后发现，内部已经使用get和set该写了，如何直接看Object发现是内部方法，接着看<code>Object.prototype.__proto__</code>，<code>Object</code>的构造函数原型指向了<code>null</code>，证实我们的想法。</p>
+<p>上次说到了<code>JavaScript</code>中的<code>new</code>关键字，现在我们看看<code>JavaScript</code>中的继承是怎么实现的吧。接着上次的那个英雄游戏，我们要创建英雄，每个英雄的技能都不一样，但是技能个数，基础的一些技能是一样的，这样我们可以创建一个英雄的基类</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 英雄(<span class="params">英雄类型, 英雄种族</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.英雄类型 = 英雄类型; </div><div class="line">    <span class="keyword">this</span>.英雄种族 = 英雄种族;</div><div class="line">&#125;</div><div class="line"></div><div class="line">英雄.prorotype.释放技能 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">/*...*/</span>&#125;;</div><div class="line">英雄.prototype.普通攻击 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">/*...*/</span>&#125;;</div><div class="line">英雄.prototype.受到伤害 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">/*...*/</span>&#125;;</div><div class="line">英雄.prototype.死亡 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">/*...*/</span>&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 创建一个人类物理类型英雄的基类</span></div><div class="line"><span class="function"><span class="keyword">function</span> 人类物理英雄(<span class="params">英雄性别, 英雄血量, 英雄技能</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.英雄性别 = 英雄性别;</div><div class="line">    <span class="keyword">this</span>.英雄血量 = 英雄血量;</div><div class="line">    <span class="keyword">this</span>.英雄技能 = 英雄技能;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 继承</span></div><div class="line">人类物理英雄.prorotype = <span class="keyword">new</span> 英雄(<span class="string">'物理'</span>, <span class="string">'人类'</span>);</div><div class="line"><span class="comment">// 修正构造函数指向</span></div><div class="line">人类物理英雄.prorotype.constructor = 人类物理英雄;</div><div class="line"><span class="comment">// 下面这个决对不上凑数的</span></div><div class="line">人类物理英雄.prorotype.英雄特有种族技能 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;<span class="comment">/*...*/</span>&#125;</div><div class="line"></div><div class="line"><span class="comment">// 创建一个人类英雄</span></div><div class="line">小明 = <span class="keyword">new</span> 人类物理英雄(<span class="string">'男'</span>, <span class="number">100</span>, <span class="string">'神吐槽'</span>);</div></pre></td></tr></table></figure>
+<p>上面的代码，创建了一个英雄的基类，然后创建了一个人类英雄的类，继承了英雄的方法，由代码可以看出，<code>javascript</code>只能实现单继承，继承的原理其实就是通过原型链，让当前对象可以访问到原型链上的方法。</p>
 </span>
       
     </div>
@@ -260,7 +243,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/npm/" rel="tag">#npm</a>
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
           
         </div>
       
@@ -269,13 +252,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Javascript高程/Javascript的Objcet类型/" rel="prev">Javascript的Objcet类型</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/随笔记录/收藏网站/" rel="next">收藏网站</a>
+              <a href="/原生JavaScript/new到底做了什么/" rel="next">深入浅出理解new关键字</a>
             
           </div>
         </div>
@@ -301,8 +282,8 @@
             
               <div class="comments" id="comments">
                 
-                  <div class="ds-thread" data-thread-key="随笔记录/npm常用命令/"
-                       data-title="npm常用命令" data-url="http://www.mycgx.com/随笔记录/npm常用命令/">
+                  <div class="ds-thread" data-thread-key="原生JavaScript/用JavaScript实现继承/"
+                       data-title="用JavaScript实现继承" data-url="http://www.mycgx.com/原生JavaScript/用JavaScript实现继承/">
                   </div>
                 
               </div>

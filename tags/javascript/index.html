@@ -40,7 +40,7 @@
 <meta name="description" content="记录学习点滴,分享前端知识">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小鱼Gus">
-<meta property="og:url" content="http://www.mycgx.com/tags/Javascript/index.html">
+<meta property="og:url" content="http://www.mycgx.com/tags/javascript/index.html">
 <meta property="og:site_name" content="小鱼Gus">
 <meta property="og:description" content="记录学习点滴,分享前端知识">
 <meta name="twitter:card" content="summary">
@@ -55,7 +55,7 @@
   };
 </script>
 
-    <title> 标签: Javascript // 小鱼Gus </title>
+    <title> 标签: javascript // 小鱼Gus </title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 <!--[if lte IE 8]>
@@ -167,7 +167,7 @@
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        Javascript
+        javascript
         <small>标签</small>
       </h2>
     </div>
@@ -180,14 +180,14 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/原生JavaScript/new到底做了什么/" itemprop="url">
-              <span itemprop="name">深入浅出理解new关键字</span>
+            <a class="post-title-link" href="/随笔记录/兼容class的选择器/" itemprop="url">
+              <span itemprop="name">兼容class的选择器</span>
             </a>
         
       </h1>
 
       <div class="post-meta">
-        <time class="post-time" datetime="2016-12-14T14:14:00.000Z" itemprop="dateCreated" content="2016-12-14"> 12-14 </time>
+        <time class="post-time" datetime="2015-10-21T13:18:14.000Z" itemprop="dateCreated" content="2015-10-21"> 10-21 </time>
       </div>
 
     </header>
@@ -230,7 +230,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -418,6 +418,33 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
+r all = MathJax.Hub.getAllJax(), i;
     for (i=0; i < all.length; i += 1) {
       all[i].SourceElement().parentNode.className += ' has-jax';
     }
